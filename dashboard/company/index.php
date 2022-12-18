@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>DASHBOARD</title>
-    <link rel="icon" href="../../assets/peso_logo_one.gif" >
+    <!-- <link rel="icon" href="../../assets/peso_logo_one.gif" > -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" defer></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -120,19 +120,19 @@ if($islogin){
         if(form("filter") && value("sub") == "applicants"){
             $filter = strtolower(mysqli_value($con,"filter"));
             if($filter == "pending"){
-                $load_applicants = mysqli_query($con,"SELECT tbl_applicants.id, tbl_applicants.applicantsid,tbl_accounts.email, tbl_accounts.firstname, tbl_accounts.lastname, tbl_accounts.cnum, tbl_accounts.bday, tbl_accounts.address, tbl_accounts.age, tbl_resume.path AS 'resume', tbl_applicants.companyid, tbl_applicants.jobid, tbl_jobs.j_name, tbl_applicants.status, tbl_applicants.created_at, facebook, linkedin, instagram, degree_title, school_name,school_year_attended  FROM tbl_applicants INNER JOIN tbl_accounts ON tbl_accounts.id = tbl_applicants.applicantsid INNER JOIN tbl_resume ON tbl_resume.userid = tbl_applicants.applicantsid INNER JOIN tbl_jobs ON tbl_jobs.id = tbl_applicants.jobid WHERE tbl_applicants.companyid = $c_id AND  tbl_applicants.status = 1");
+                $load_applicants = mysqli_query($con,"SELECT tbl_applicants.id, tbl_applicants.applicantsid,tbl_accounts.email, tbl_accounts.firstname, tbl_accounts.lastname, tbl_accounts.cnum, tbl_accounts.bday, tbl_accounts.address, tbl_accounts.age, tbl_resume.path AS 'resume', tbl_applicants.companyid, tbl_applicants.jobid, tbl_jobs.j_name, tbl_applicants.status, tbl_applicants.created_at, facebook, linkedin, instagram, degree_title, school_name,school_year_attended  FROM tbl_applicants INNER JOIN tbl_accounts ON tbl_accounts.id = tbl_applicants.applicantsid left JOIN tbl_resume ON tbl_resume.userid = tbl_applicants.applicantsid INNER JOIN tbl_jobs ON tbl_jobs.id = tbl_applicants.jobid WHERE tbl_applicants.companyid = $c_id AND  tbl_applicants.status = 1");
             }elseif($filter == "hired"){
-                $load_applicants = mysqli_query($con,"SELECT tbl_applicants.id, tbl_applicants.applicantsid,tbl_accounts.email, tbl_accounts.firstname, tbl_accounts.lastname, tbl_accounts.cnum, tbl_accounts.bday, tbl_accounts.address, tbl_accounts.age, tbl_resume.path AS 'resume', tbl_applicants.companyid, tbl_applicants.jobid, tbl_jobs.j_name, tbl_applicants.status, tbl_applicants.created_at  , facebook, linkedin, instagram, degree_title, school_name,school_year_attended FROM tbl_applicants INNER JOIN tbl_accounts ON tbl_accounts.id = tbl_applicants.applicantsid INNER JOIN tbl_resume ON tbl_resume.userid = tbl_applicants.applicantsid INNER JOIN tbl_jobs ON tbl_jobs.id = tbl_applicants.jobid WHERE tbl_applicants.companyid = $c_id AND  tbl_applicants.status = 2");
+                $load_applicants = mysqli_query($con,"SELECT tbl_applicants.id, tbl_applicants.applicantsid,tbl_accounts.email, tbl_accounts.firstname, tbl_accounts.lastname, tbl_accounts.cnum, tbl_accounts.bday, tbl_accounts.address, tbl_accounts.age, tbl_resume.path AS 'resume', tbl_applicants.companyid, tbl_applicants.jobid, tbl_jobs.j_name, tbl_applicants.status, tbl_applicants.created_at  , facebook, linkedin, instagram, degree_title, school_name,school_year_attended FROM tbl_applicants INNER JOIN tbl_accounts ON tbl_accounts.id = tbl_applicants.applicantsid left JOIN tbl_resume ON tbl_resume.userid = tbl_applicants.applicantsid INNER JOIN tbl_jobs ON tbl_jobs.id = tbl_applicants.jobid WHERE tbl_applicants.companyid = $c_id AND  tbl_applicants.status = 2");
             }elseif($filter == "declined"){
-                $load_applicants = mysqli_query($con,"SELECT tbl_applicants.id, tbl_applicants.applicantsid, tbl_accounts.email,tbl_accounts.firstname, tbl_accounts.lastname, tbl_accounts.cnum, tbl_accounts.bday, tbl_accounts.address, tbl_accounts.age, tbl_resume.path AS 'resume', tbl_applicants.companyid, tbl_applicants.jobid, tbl_jobs.j_name, tbl_applicants.status, tbl_applicants.created_at , facebook, linkedin, instagram, degree_title, school_name,school_year_attended FROM tbl_applicants INNER JOIN tbl_accounts ON tbl_accounts.id = tbl_applicants.applicantsid INNER JOIN tbl_resume ON tbl_resume.userid = tbl_applicants.applicantsid INNER JOIN tbl_jobs ON tbl_jobs.id = tbl_applicants.jobid WHERE tbl_applicants.companyid = $c_id AND  tbl_applicants.status = 3");
+                $load_applicants = mysqli_query($con,"SELECT tbl_applicants.id, tbl_applicants.applicantsid, tbl_accounts.email,tbl_accounts.firstname, tbl_accounts.lastname, tbl_accounts.cnum, tbl_accounts.bday, tbl_accounts.address, tbl_accounts.age, tbl_resume.path AS 'resume', tbl_applicants.companyid, tbl_applicants.jobid, tbl_jobs.j_name, tbl_applicants.status, tbl_applicants.created_at , facebook, linkedin, instagram, degree_title, school_name,school_year_attended FROM tbl_applicants INNER JOIN tbl_accounts ON tbl_accounts.id = tbl_applicants.applicantsid left JOIN tbl_resume ON tbl_resume.userid = tbl_applicants.applicantsid INNER JOIN tbl_jobs ON tbl_jobs.id = tbl_applicants.jobid WHERE tbl_applicants.companyid = $c_id AND  tbl_applicants.status = 3");
             }else{
-                $load_applicants = mysqli_query($con,"SELECT tbl_applicants.id, tbl_applicants.applicantsid,tbl_accounts.email, tbl_accounts.firstname, tbl_accounts.lastname, tbl_accounts.cnum, tbl_accounts.bday, tbl_accounts.address, tbl_accounts.age, tbl_resume.path AS 'resume', tbl_applicants.companyid, tbl_applicants.jobid, tbl_jobs.j_name, tbl_applicants.status, tbl_applicants.created_at , facebook, linkedin, instagram, degree_title, school_name,school_year_attended FROM tbl_applicants INNER JOIN tbl_accounts ON tbl_accounts.id = tbl_applicants.applicantsid INNER JOIN tbl_resume ON tbl_resume.userid = tbl_applicants.applicantsid INNER JOIN tbl_jobs ON tbl_jobs.id = tbl_applicants.jobid WHERE tbl_applicants.companyid = $c_id");
+                $load_applicants = mysqli_query($con,"SELECT tbl_applicants.id, tbl_applicants.applicantsid,tbl_accounts.email, tbl_accounts.firstname, tbl_accounts.lastname, tbl_accounts.cnum, tbl_accounts.bday, tbl_accounts.address, tbl_accounts.age, tbl_resume.path AS 'resume', tbl_applicants.companyid, tbl_applicants.jobid, tbl_jobs.j_name, tbl_applicants.status, tbl_applicants.created_at , facebook, linkedin, instagram, degree_title, school_name,school_year_attended FROM tbl_applicants INNER JOIN tbl_accounts ON tbl_accounts.id = tbl_applicants.applicantsid left JOIN tbl_resume ON tbl_resume.userid = tbl_applicants.applicantsid INNER JOIN tbl_jobs ON tbl_jobs.id = tbl_applicants.jobid WHERE tbl_applicants.companyid = $c_id");
             }
 
 
         }else{
             $filter = "all";
-            $load_applicants = mysqli_query($con,"SELECT tbl_applicants.id, tbl_applicants.applicantsid, tbl_accounts.email,tbl_accounts.firstname, tbl_accounts.lastname, tbl_accounts.cnum, tbl_accounts.bday, tbl_accounts.address, tbl_accounts.age, tbl_accounts.email, tbl_resume.path AS 'resume', tbl_applicants.companyid, tbl_applicants.jobid, tbl_jobs.j_name, tbl_applicants.status, tbl_applicants.created_at , facebook, linkedin, instagram, degree_title, school_name,school_year_attended FROM tbl_applicants INNER JOIN tbl_accounts ON tbl_accounts.id = tbl_applicants.applicantsid INNER JOIN tbl_resume ON tbl_resume.userid = tbl_applicants.applicantsid INNER JOIN tbl_jobs ON tbl_jobs.id = tbl_applicants.jobid WHERE tbl_applicants.companyid = $c_id");
+            $load_applicants = mysqli_query($con,"SELECT tbl_applicants.id, tbl_applicants.applicantsid, tbl_accounts.email,tbl_accounts.firstname, tbl_accounts.lastname, tbl_accounts.cnum, tbl_accounts.bday, tbl_accounts.address, tbl_accounts.age, tbl_accounts.email, tbl_resume.path AS 'resume', tbl_applicants.companyid, tbl_applicants.jobid, tbl_jobs.j_name, tbl_applicants.status, tbl_applicants.created_at , facebook, linkedin, instagram, degree_title, school_name,school_year_attended FROM tbl_applicants INNER JOIN tbl_accounts ON tbl_accounts.id = tbl_applicants.applicantsid left JOIN tbl_resume ON tbl_resume.userid = tbl_applicants.applicantsid INNER JOIN tbl_jobs ON tbl_jobs.id = tbl_applicants.jobid WHERE tbl_applicants.companyid = $c_id");
         }
 
         $count_applicants = mysqli_num_rows($load_applicants);
@@ -475,19 +475,9 @@ if($islogin){
                                                             <i class="fa fa-times"></i>
                                                             DECLINE
                                                         </button>
-                                                       <!--  <a href="../../resume/<?= $row["resume"] ?>" class="button" download>
-                                                            <i class="fa fa-file-text-o"></i>
-                                                            DOWNLOAD RESUME
-                                                        </a>
- -->
-                                                        <button class="button">
-                                                             <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"  download style="color: white;">
-                                                                    <i class="fa fa-file-text-o"></i>EMAIL CONFIRMATION
-                                                                </a>
-                                                        </button>
-                                                       
+                                                    
 
-                                                       <button  class="button" data-toggle="tooltip" data-placement="top" title="View" type="button" value="<?= getMyUrl().'/iconnect/resume/'.  $row["resume"] ?>" id="mybtn<?= $row["id"] ?>" onclick="showModal('<?= getMyUrl().'/iconnect/resume/'.  $row["resume"] ?>', this.id)">
+                                                       <button  class="button" data-toggle="tooltip" data-placement="top" title="View" type="button" value="<?= getMyUrl().'/grab_worker/resume/'.  $row["resume"] ?>" id="mybtn<?= $row["id"] ?>" onclick="showModal('<?= getMyUrl().'/grab_worker/resume/'.  $row["resume"] ?>', this.id)">
                                                                 <i class="fa fa-file-text-o"></i>   VIEW RESUME
                                                         </button>
 
@@ -500,11 +490,8 @@ if($islogin){
                                                             <i class="fa fa-times"></i>
                                                             DECLINE
                                                         </button>
-                                                        <!-- <a href="../../resume/<?= $row["resume"] ?>" class="button" download>
-                                                            <i class="fa fa-file-text-o"></i>
-                                                            DOWNLOAD RESUME
-                                                        </a> -->
-                                                          <button  class="button" data-toggle="tooltip" data-placement="top" title="View" type="button" value="<?= getMyUrl().'/iconnect/resume/'.  $row["resume"] ?>" id="mybtn<?= $row["id"] ?>" onclick="showModal('<?= getMyUrl().'/iconnect/resume/'.  $row["resume"] ?>', this.id)">
+                                                     
+                                                          <button  class="button" data-toggle="tooltip" data-placement="top" title="View" type="button" value="<?= getMyUrl().'/grab_worker/resume/'.  $row["resume"] ?>" id="mybtn<?= $row["id"] ?>" onclick="showModal('<?= getMyUrl().'/grab_worker/resume/'.  $row["resume"] ?>', this.id)">
                                                                 <i class="fa fa-file-text-o"></i>   VIEW RESUME
                                                         </button>
 
@@ -517,11 +504,8 @@ if($islogin){
                                                             <i class="fa fa-times"></i>
                                                             DECLINE
                                                         </button>
-                                                       <!--  <a href="../../resume/<?= $row["resume"] ?>" class="button" download>
-                                                            <i class="fa fa-file-text-o"></i>
-                                                            DOWNLOAD RESUME
-                                                        </a> -->
-                                                         <button  class="button" data-toggle="tooltip" data-placement="top" title="View" type="button" value="<?= getMyUrl().'/iconnect/resume/'.  $row["resume"] ?>" id="mybtn<?= $row["id"] ?>" onclick="showModal('<?= getMyUrl().'/iconnect/resume/'.  $row["resume"] ?>', this.id)">
+                                                      
+                                                         <button  class="button" data-toggle="tooltip" data-placement="top" title="View" type="button" value="<?= getMyUrl().'/grab_worker/resume/'.  $row["resume"] ?>" id="mybtn<?= $row["id"] ?>" onclick="showModal('<?= getMyUrl().'/grab_worker/resume/'.  $row["resume"] ?>', this.id)">
                                                                 <i class="fa fa-file-text-o"></i>   VIEW RESUME
                                                         </button>
                                                     <?php }?>
@@ -772,7 +756,7 @@ function updateNotification(id){
                     }, 300);
                 } else {
                     setTimeout(() => {
-                        window.location.href="/iconnect/dashboard/company/?page=hire&sub=applicants"
+                        window.location.href="/grab_worker/dashboard/company/?page=hire&sub=applicants"
                     }, 300);
                 }
             } else {

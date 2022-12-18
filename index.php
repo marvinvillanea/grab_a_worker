@@ -63,7 +63,7 @@ function updateNotification(id){
                     }, 300);
                 } else {
                     setTimeout(() => {
-                        window.location.href="/iconnect/dashboard/company/?page=hire&sub=applicants"
+                        window.location.href="/grab_worker/dashboard/company/?page=hire&sub=applicants"
                     }, 300);
                 }
             } else {

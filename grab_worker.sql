@@ -14,8 +14,8 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
--- Dumping structure for table grab_worker.tbl_accounts
-CREATE TABLE IF NOT EXISTS `tbl_accounts` (
+
+CREATE TABLE `tbl_accounts` (
   `id` int NOT NULL AUTO_INCREMENT,
   `firstname` varchar(50) NOT NULL,
   `lastname` varchar(50) NOT NULL,
@@ -42,14 +42,13 @@ CREATE TABLE IF NOT EXISTS `tbl_accounts` (
   `status_id` int DEFAULT '0' COMMENT '0 = not verified , 1 = verifed by admin',
   `prof_id_image` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table grab_worker.tbl_accounts: ~5 rows (approximately)
-DELETE FROM `tbl_accounts`;
+
 INSERT INTO `tbl_accounts` (`id`, `firstname`, `lastname`, `cnum`, `bday`, `age`, `address`, `email`, `password`, `type`, `verification_state`, `avatar`, `department`, `facebook`, `linkedin`, `instagram`, `degree_title`, `school_name`, `school_address`, `school_year_attended`, `achievement`, `created_at`, `updated_at`, `status_id`, `prof_id_image`) VALUES
-	(6, 'admin', 'admin', '09093939708', '2001-08-30', 25, '739 G. Araneta Avenue 1100', 'admin@connect.com', '1234', 1, 0, 'avatar_default.png', 'none', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-08-03 10:15:03', '2022-12-18 04:28:51', 1, NULL),
-	(7, 'company', 'company', '09093939705', '2022-09-10', 25, 'Rm. 202 Grace Building Ortigas Avenue Greenhills 1500', 'company@connect.com', '1234', 2, 2, 'avatar_default.png', 'none', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-08-03 10:33:47', '2022-12-18 02:56:36', 1, NULL),
-	(8, 'client', 'client', '09486502742', '2002-02-22', 25, 'P. Burgos Street corner Caseres Street', 'client@connect.com', '1234', 3, 2, 'avatar_default.png', 'I.T', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-08-03 10:34:28', '2022-12-18 04:29:44', 1, NULL),
+	(6, 'admin', 'admin', '09093939708', '2001-08-30', 25, '739 G. Araneta Avenue 1100', 'admin@connect.com', '1234', 1, 0, 'avatar_default.png', 'none', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-08-03 10:15:03', '2022-12-18 05:46:33', 1, NULL),
+	(7, 'company', 'company', '09093939705', '2022-09-10', 25, 'Rm. 202 Grace Building Ortigas Avenue Greenhills 1500', 'company@connect.com', '1234', 2, 2, 'avatar_default.png', 'none', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-08-03 10:33:47', '2022-12-18 05:44:35', 1, NULL),
+	(8, 'client', 'client', '09486502742', '2002-02-22', 25, 'P. Burgos Street corner Caseres Street', 'client@connect.com', '1234', 3, 2, 'avatar_default.png', 'I.T', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-08-03 10:34:28', '2022-12-18 05:57:38', 1, NULL),
 	(9, 'client1', 'client1', '09755983121', '2002-02-22', 25, '#26 mBaguio First Hotel, Bonifacio Street', 'client1@connect.com', '1234', 3, 2, 'avatar_default.png', 'I.T', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-08-03 10:34:28', '2022-12-13 05:37:42', 1, NULL),
 	(10, '1', '1', '09093939708', '2022-09-15', 12, '12121', '1234@yahoo.com', '123456789', 2, 0, 'avatar_default.png', 'none', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-09-14 09:06:23', '2022-12-14 21:16:05', 1, NULL),
 	(12, 'marvin', 'villanea', '09486502742', '2006-02-07', 21, 'Purok 2, Tibanga-Saray', 'marvinvillanea1@gmail.com', 'marvin123', 3, 2, 'avatar_default.png', 'I.T', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-11-14 15:56:26', '2022-12-18 02:59:32', 1, NULL),
@@ -60,10 +59,12 @@ INSERT INTO `tbl_accounts` (`id`, `firstname`, `lastname`, `cnum`, `bday`, `age`
 	(19, 'VILLANEA', 'MARVIN', '09755983121', '2001-06-18', 21, 'Tibanga Iligan City', 'marvinvillanea1222222@gmail.com', 'marvinvillanea1222222', 2, 0, 'avatar_default.png', 'none', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-18 03:04:51', '2022-12-18 04:30:08', 1, '../../assets/images/2cac42884a37fb916d1cd8975ddfd9ee.png'),
 	(20, 'VILLANEA', 'MARVIN', '09755983121', '2022-12-18', 23, 'testing123', 'marvinvillanea123211@gmail.com', 'marvinvillanea123211', 3, 0, 'avatar_default.png', 'I.T', 'https://www.facebook.com/', 'https://www.facebook.com/', 'https://www.facebook.com/', 'Bachelor Science Technoilogy', 'Fernando Jose Torres', 'Morales Str', '6', 'honor', '2022-12-18 03:12:19', '2022-12-18 03:12:59', 1, '../../assets/images/dc40fd27393a0ab2aa3733c15d55aa5c.png'),
 	(21, 'VILLANEA', 'MARVIN', '09755983121', '2022-12-18', 23, 'testing123', 'jobseekerrrr@gmail.com', 'jobseekerrrr', 3, 2, 'avatar_default.png', 'I.T', 'https://www.facebook.com/', 'https://www.facebook.com/', 'https://www.facebook.com/', 'Bachelor Science Technoilogy', 'VILLANEA MARVIN', 'Purok 2, Ti', '23', 'dsafdasf', '2022-12-18 04:23:55', '2022-12-18 04:27:57', 1, '../../assets/images/93311be957191d7f3cd0fb36c674f3be.png'),
-	(22, 'VILLANEA', 'MARVIN', '09755983121', '2022-12-18', 21, 'testing123', 'jobseekerrrr123@gmail.com', 'jobseekerrrr123', 3, 2, 'avatar_default.png', 'I.T', 'https://www.facebook.com/messages/t/100038846283830', 'https://www.facebook.com/messages/t/100038846283830', 'https://www.facebook.com/messages/t/100038846283830', 'Bachelor Science Technoilogy', 'VILLANEA MARVIN', 'Purok 2, Ti', '23', '13', '2022-12-18 04:26:04', '2022-12-18 04:48:56', 1, '../../assets/images/6bc67e4d360f2c1038458c6bb288ee78.png');
+	(22, 'VILLANEA', 'MARVIN', '09755983121', '2022-12-18', 21, 'testing123', 'jobseekerrrr123@gmail.com', 'jobseekerrrr123', 3, 2, 'avatar_default.png', 'I.T', 'https://www.facebook.com/messages/t/100038846283830', 'https://www.facebook.com/messages/t/100038846283830', 'https://www.facebook.com/messages/t/100038846283830', 'Bachelor Science Technoilogy', 'VILLANEA MARVIN', 'Purok 2, Ti', '23', '13', '2022-12-18 04:26:04', '2022-12-18 05:56:44', 1, '../../assets/images/6bc67e4d360f2c1038458c6bb288ee78.png'),
+	(23, 'VILLANEA', 'MARVIN', '09755983121', '2022-12-18', 21, 'Tesing', 'marvinvillanea1233333@gmail.com', 'marvinvillanea1233333', 3, 2, 'avatar_default.png', '123', 'https://www.facebook.com/messages/t/100038846283830', 'https://www.facebook.com/messages/t/100038846283830', 'https://www.facebook.com/messages/t/100038846283830', 'Bachelor Science Technoilogy', 'VILLANEA MARVIN', 'Purok 2, Ti', '23', '3123123', '2022-12-18 05:43:23', '2022-12-18 05:43:28', 1, '../../assets/images/e4a59f829a7698c6c6ad2cf2b2c8bcca.png'),
+	(24, 'VILLANEA', 'MARVIN', '09755983121', '2022-12-18', 23, 'testing123', 'marvinvillanea1222332@gmail.com', 'marvinvillanea1222332', 2, 0, 'avatar_default.png', 'none', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-18 05:46:17', '2022-12-18 05:50:36', 1, '../../assets/images/5da41dbe047669acba1829f34fd604a1.png');
 
--- Dumping structure for table grab_worker.tbl_applicants
-CREATE TABLE IF NOT EXISTS `tbl_applicants` (
+
+CREATE TABLE `tbl_applicants` (
   `id` int NOT NULL AUTO_INCREMENT,
   `companyid` int NOT NULL,
   `applicantsid` int NOT NULL,
@@ -73,8 +74,6 @@ CREATE TABLE IF NOT EXISTS `tbl_applicants` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table grab_worker.tbl_applicants: ~8 rows (approximately)
-DELETE FROM `tbl_applicants`;
 INSERT INTO `tbl_applicants` (`id`, `companyid`, `applicantsid`, `jobid`, `status`, `created_at`) VALUES
 	(1, 4, 8, 3, 1, '2022-08-12 06:00:44'),
 	(2, 4, 8, 3, 1, '2022-08-12 06:00:44'),
@@ -86,8 +85,8 @@ INSERT INTO `tbl_applicants` (`id`, `companyid`, `applicantsid`, `jobid`, `statu
 	(9, 5, 9, 14, 1, '2022-11-29 02:05:32'),
 	(10, 4, 22, 3, 1, '2022-12-18 04:26:16');
 
--- Dumping structure for table grab_worker.tbl_company
-CREATE TABLE IF NOT EXISTS `tbl_company` (
+
+CREATE TABLE `tbl_company` (
   `id` int NOT NULL AUTO_INCREMENT,
   `userid` int NOT NULL,
   `c_logo` varchar(70) NOT NULL DEFAULT 'company_logo_default.png',
@@ -99,10 +98,9 @@ CREATE TABLE IF NOT EXISTS `tbl_company` (
   `department` varchar(50) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table grab_worker.tbl_company: ~8 rows (approximately)
-DELETE FROM `tbl_company`;
+
 INSERT INTO `tbl_company` (`id`, `userid`, `c_logo`, `c_banner`, `c_name`, `c_address`, `c_cnum`, `c_position`, `department`, `created_at`) VALUES
 	(4, 6, 'company_logo_default.png', 'company_banner_default.png', 'D Devs', 'Manila, Metro Manila', '09093939708', 'I.T', 'I.T', '2022-08-03 10:15:03'),
 	(5, 7, 'company_logo_default.png', 'company_banner_default.png', 'Fux Devs', 'Manila, Metro Manila', '09093939708', 'I.T', 'I.T', '2022-08-03 10:33:47'),
@@ -111,10 +109,11 @@ INSERT INTO `tbl_company` (`id`, `userid`, `c_logo`, `c_banner`, `c_name`, `c_ad
 	(8, 13, 'company_logo_default.png', 'company_banner_default.png', 'ggg', '2313123', '09755983121', 'afdasfads', 'dasfadsfas', '2022-11-26 13:17:37'),
 	(9, 14, 'company_logo_default.png', 'company_banner_default.png', 'ggg', '2313123', '09755983121', 'ggg', '123', '2022-11-26 13:21:45'),
 	(10, 17, 'company_logo_default.png', 'company_banner_default.png', 'ggg', '2313123', '09755983121', '23', '23', '2022-12-14 20:44:03'),
-	(11, 19, 'company_logo_default.png', 'company_banner_default.png', 'GOOGLE', 'New York', '09755983121', 'Web Developer', 'IT', '2022-12-18 03:04:51');
+	(11, 19, 'company_logo_default.png', 'company_banner_default.png', 'GOOGLE', 'New York', '09755983121', 'Web Developer', 'IT', '2022-12-18 03:04:51'),
+	(12, 24, 'company_logo_default.png', 'company_banner_default.png', 'ggg', '2313123', '09755983121', 'ggg', 'dasfadsfas', '2022-12-18 05:46:17');
 
--- Dumping structure for table grab_worker.tbl_company_reports
-CREATE TABLE IF NOT EXISTS `tbl_company_reports` (
+
+CREATE TABLE `tbl_company_reports` (
   `id` int NOT NULL AUTO_INCREMENT,
   `company_id` int NOT NULL,
   `reported_by` int NOT NULL,
@@ -123,15 +122,14 @@ CREATE TABLE IF NOT EXISTS `tbl_company_reports` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table grab_worker.tbl_company_reports: ~3 rows (approximately)
-DELETE FROM `tbl_company_reports`;
+
 INSERT INTO `tbl_company_reports` (`id`, `company_id`, `reported_by`, `message`, `created_at`) VALUES
 	(1, 4, 8, 'Miss leading information', '2022-08-26 18:35:28'),
 	(2, 4, 8, 'Miss leading information', '2022-08-26 18:35:28'),
 	(3, 4, 8, 'asdasdsa', '2022-09-01 23:43:15');
 
--- Dumping structure for table grab_worker.tbl_jobs
-CREATE TABLE IF NOT EXISTS `tbl_jobs` (
+
+CREATE TABLE `tbl_jobs` (
   `id` int NOT NULL AUTO_INCREMENT,
   `userid` int NOT NULL,
   `j_name` varchar(50) NOT NULL,
@@ -143,12 +141,11 @@ CREATE TABLE IF NOT EXISTS `tbl_jobs` (
   `j_created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `status_type` int DEFAULT '0' COMMENT '0 = active , 1 = not active',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table grab_worker.tbl_jobs: ~28 rows (approximately)
-DELETE FROM `tbl_jobs`;
+
 INSERT INTO `tbl_jobs` (`id`, `userid`, `j_name`, `j_age`, `j_min`, `j_max`, `j_currency_symbol`, `j_description`, `j_created_at`, `status_type`) VALUES
-	(1, 7, 'I.T', 18, 15000, 200000, '₱', 'Solary', '2022-08-04 16:46:17', 0),
+	(1, 7, 'I.T', 18, 15000, 200000, '₱', '<p>Solary</p>\r\n', '2022-08-04 16:46:17', 0),
 	(2, 7, 'Social Media Avertiser', 18, 10000, 200000, '₱', 'Solary', '2022-08-04 16:46:17', 0),
 	(3, 6, 'Back End Developer', 18, 15000, 20000, '₱', '<p><strong>Bruh</strong></p>\r\n', '2022-08-11 21:22:23', 0),
 	(4, 7, 'PHP Dev', 21, 15000, 30000, '₱', '<p>Hi</p>\r\n', '2022-09-14 10:23:22', 0),
@@ -175,10 +172,11 @@ INSERT INTO `tbl_jobs` (`id`, `userid`, `j_name`, `j_age`, `j_min`, `j_max`, `j_
 	(25, 7, 'TESTIN tae', 50, 50000, 49998, '₱', '<p>afdasfdasfdasf</p>\r\n', '2022-11-28 18:34:21', 0),
 	(26, 7, 'Web Developer Testingggg TAEEEEE', 60, 5000, 50000, '₱', '<p>DFSAFDASFDSAFADSF</p>\r\n', '2022-11-28 18:34:55', 0),
 	(27, 7, 'Web Developer Testingggg fsdgfdsgfsdg', 50, 50000, 50000, '₱', '<p>dsafdsafdasfas</p>\r\n', '2022-11-28 18:35:22', 0),
-	(28, 19, 'Web Developer', 18, 5000, 5000, '₱', '<p>dsa</p>\r\n', '2022-12-18 04:32:27', 1);
+	(28, 19, 'Web Developer', 18, 5000, 5000, '₱', '<p>dsa</p>\r\n', '2022-12-18 04:32:27', 1),
+	(29, 24, 'Fullstack Developer', 18, 50000, 50000, '₱', '<p>Skill<br />\r\nHtml</p>\r\n', '2022-12-18 05:56:00', 0);
 
--- Dumping structure for table grab_worker.tbl_notification
-CREATE TABLE IF NOT EXISTS `tbl_notification` (
+
+CREATE TABLE `tbl_notification` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `user_id` bigint NOT NULL DEFAULT '0',
   `description` varchar(255) NOT NULL DEFAULT '0',
@@ -188,8 +186,7 @@ CREATE TABLE IF NOT EXISTS `tbl_notification` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table grab_worker.tbl_notification: ~51 rows (approximately)
-DELETE FROM `tbl_notification`;
+
 INSERT INTO `tbl_notification` (`id`, `user_id`, `description`, `status`, `created_at`, `updated_at`) VALUES
 	(1, 3, 'You`re hired, Hello $fullname, We see your resume and you have good potential for this kind of job $job_name , Please contact us on $company_cnum. - $company_name.', 0, '2022-11-14 15:05:23', '2022-11-14 15:05:23'),
 	(2, 3, 'Hello client client, Your application for this position Back End Developer was declined - Fux Devs.', 0, '2022-11-14 15:07:13', '2022-11-14 15:07:13'),
@@ -203,13 +200,13 @@ INSERT INTO `tbl_notification` (`id`, `user_id`, `description`, `status`, `creat
 	(10, 3, 'Hello client client, Your application for this position Back End Developer was declined - Fux Devs.', 0, '2022-11-14 15:14:13', '2022-11-14 15:14:13'),
 	(11, 3, 'You`re hired, Hello client client, We see your resume and you have good potential for this kind of job Back End Developer , Please contact us on 09093939708. - Fux Devs.', 0, '2022-11-14 15:15:09', '2022-11-14 15:15:09'),
 	(12, 3, 'Hello client client, Your application for this position Back End Developer was declined - Fux Devs.', 0, '2022-11-14 15:15:19', '2022-11-14 15:15:19'),
-	(13, 8, 'You`re hired, Hello client client, We see your resume and you have good potential for this kind of job Back End Developer , Please contact us on 09093939708. - Fux Devs.', 0, '2022-11-14 15:17:34', '2022-11-15 01:50:22'),
+	(13, 8, 'You`re hired, Hello client client, We see your resume and you have good potential for this kind of job Back End Developer , Please contact us on 09093939708. - Fux Devs.', 1, '2022-11-14 15:17:34', '2022-12-18 05:58:19'),
 	(14, 8, 'Hello client client, Your application for this position Back End Developer was declined - Fux Devs.', 1, '2022-11-14 15:17:41', '2022-11-15 01:53:06'),
 	(15, 8, 'You`re hired, Hello client client, We see your resume and you have good potential for this kind of job Back End Developer , Please contact us on 09093939708. - Fux Devs.', 1, '2022-11-14 15:24:44', '2022-11-15 01:52:58'),
 	(16, 8, 'You`re hired, Hello client client, We see your resume and you have good potential for this kind of job Back End Developer , Please contact us on 09093939708. - Fux Devs.', 1, '2022-11-14 15:24:54', '2022-11-15 01:52:26'),
 	(17, 8, 'You`re hired, Hello client client, We see your resume and you have good potential for this kind of job Back End Developer , Please contact us on 09093939708. - Fux Devs.', 1, '2022-11-14 15:27:14', '2022-11-15 01:52:19'),
-	(18, 8, 'Hello client client, Your application for this position Back End Developer was declined - Fux Devs.', 0, '2022-11-15 01:54:19', '2022-11-15 01:54:19'),
-	(19, 8, 'You`re hired, Hello client client, We see your resume and you have good potential for this kind of job Back End Developer , Please contact us on 09093939708. - Fux Devs.', 0, '2022-11-15 01:54:23', '2022-11-15 01:54:23'),
+	(18, 8, 'Hello client client, Your application for this position Back End Developer was declined - Fux Devs.', 1, '2022-11-15 01:54:19', '2022-12-18 05:58:17'),
+	(19, 8, 'You`re hired, Hello client client, We see your resume and you have good potential for this kind of job Back End Developer , Please contact us on 09093939708. - Fux Devs.', 1, '2022-11-15 01:54:23', '2022-12-18 05:58:14'),
 	(20, 7, 'Company, Company, Applying for  Social Media Avertiser', 1, '2022-11-15 02:06:55', '2022-11-16 15:55:45'),
 	(21, 8, 'Hello client client, Your application for this position Social Media Avertiser was declined - Fux Devs.', 1, '2022-11-16 15:56:01', '2022-11-16 15:58:16'),
 	(22, 7, 'Company, Company, Applying for  Social Media Avertiser', 1, '2022-11-28 14:19:16', '2022-12-18 02:58:21'),
@@ -244,8 +241,8 @@ INSERT INTO `tbl_notification` (`id`, `user_id`, `description`, `status`, `creat
 	(51, 7, 'Company, Company, Applying for  Web Developer', 1, '2022-11-29 02:05:32', '2022-11-29 02:05:41'),
 	(52, 6, 'Admin, Admin, Applying for  Back End Developer', 0, '2022-12-18 04:26:16', '2022-12-18 04:26:16');
 
--- Dumping structure for table grab_worker.tbl_resume
-CREATE TABLE IF NOT EXISTS `tbl_resume` (
+
+CREATE TABLE `tbl_resume` (
   `id` int NOT NULL AUTO_INCREMENT,
   `userid` int NOT NULL,
   `path` varchar(225) NOT NULL,
@@ -253,8 +250,7 @@ CREATE TABLE IF NOT EXISTS `tbl_resume` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table grab_worker.tbl_resume: ~5 rows (approximately)
-DELETE FROM `tbl_resume`;
+
 INSERT INTO `tbl_resume` (`id`, `userid`, `path`, `created_at`) VALUES
 	(1, 6, 'example1.png', '2022-08-11 22:35:51'),
 	(2, 7, 'example4.png', '2022-08-11 22:35:51'),
@@ -262,17 +258,16 @@ INSERT INTO `tbl_resume` (`id`, `userid`, `path`, `created_at`) VALUES
 	(4, 9, '45c48cce2e2d7fbdea1afc51c7c6ad26.jpg', '2022-11-14 14:33:18'),
 	(5, 12, 'example5.jpeg', '2022-11-14 15:58:45');
 
--- Dumping structure for table grab_worker.tbl_sms_logs
-CREATE TABLE IF NOT EXISTS `tbl_sms_logs` (
+
+CREATE TABLE `tbl_sms_logs` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `receiverid` bigint NOT NULL DEFAULT '0',
   `message` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=110 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=112 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table grab_worker.tbl_sms_logs: ~0 rows (approximately)
-DELETE FROM `tbl_sms_logs`;
+
 INSERT INTO `tbl_sms_logs` (`id`, `receiverid`, `message`, `created_at`) VALUES
 	(69, 9, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"LocalMJob \n Hello client1, Fux Devs has new open job PHP PROGRAMMER .","to":"+6309755983121"}', '2022-11-28 17:22:50'),
 	(70, 9, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-11-28 17:22:51'),
@@ -314,10 +309,12 @@ INSERT INTO `tbl_sms_logs` (`id`, `receiverid`, `message`, `created_at`) VALUES
 	(106, 19, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 03:05:45'),
 	(107, 20, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Hi VILLANEA. Your Client account in LocalMJob has been approved.","to":"+6309755983121"}', '2022-12-18 03:12:47'),
 	(108, 20, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 03:12:48'),
-	(109, 20, 'Client error: `POST https://api.movider.co/v1/balance` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 03:14:35');
+	(109, 20, 'Client error: `POST https://api.movider.co/v1/balance` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 03:14:35'),
+	(110, 24, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Hi VILLANEA. Your Company account in LocalMJob has been approved.","to":"+6309755983121"}', '2022-12-18 05:46:49'),
+	(111, 24, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 05:46:49');
 
--- Dumping structure for table grab_worker.tbl_verificationcode
-CREATE TABLE IF NOT EXISTS `tbl_verificationcode` (
+
+CREATE TABLE `tbl_verificationcode` (
   `id` int NOT NULL AUTO_INCREMENT,
   `session` varchar(65) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `code` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
@@ -327,8 +324,7 @@ CREATE TABLE IF NOT EXISTS `tbl_verificationcode` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table grab_worker.tbl_verificationcode: ~5 rows (approximately)
-DELETE FROM `tbl_verificationcode`;
+
 INSERT INTO `tbl_verificationcode` (`id`, `session`, `code`, `status`, `used_at`, `created_at`) VALUES
 	(17, 'dd3d05d7de99af7a376db3aaf6a18dba', '484709', 1, '2022-09-01 21:34:41', '2022-09-01 21:33:54'),
 	(19, '5nRJwCgt95yfmq9qXlB1lv16683973682073', NULL, 0, '2022-11-14 03:42:48', '2022-11-14 03:42:48'),

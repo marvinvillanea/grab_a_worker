@@ -50,9 +50,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
     if($change_account){
         if($status == "1"){
-            $sms_message = 'Hi '.ucwords($data['firstname']).'. Your '.$type.' account in LocalMJob has been approved.';
+            $sms_message = 'Hi '.ucwords($data['firstname']).'. Your '.$type.' account in Grab A Worker has been approved.';
         }elseif($status == "3"){
-            $sms_message = 'Hi '.ucwords($data['firstname']).'. Your '.$type.' account in LocalMJob has been declined.';
+            $sms_message = 'Hi '.ucwords($data['firstname']).'. Your '.$type.' account in Grab A Worker has been declined.';
         }
 
         try {

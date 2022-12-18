@@ -73,7 +73,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         FROM
             `tbl_accounts`
         WHERE
-            `type` = 3 AND `department` = '$c_department' and verification_state = 2
+            `type` = 3 
     ");
 
     
@@ -81,7 +81,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
         $cnum = $row["cnum"];
         $firstname = $row["firstname"];
-        $sms_message = "LocalMJob \n Hello $firstname, $c_name has new open job $position_name.";
+        $sms_message = "Grab A Worker \n Hello $firstname, $c_name has new open job $position_name.";
         createNotify($con, $row["id"], $sms_message, 0);
 
         $details = [
