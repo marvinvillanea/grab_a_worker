@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Poppins:wght@200;400;500&display=swap');
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+
+}
+a{
+    text-decoration: none;
+}
+.main{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    align-items: center;
+}
+.header_logo{
+    display: flex;
+    align-items: center;
+    color: teal;
+    gap: .5rem;
+}
+.header_logo img{
+    width: 50px;
+    height: 50px;
+}
+.header_logo p{
+    font-size: 1.2rem;
+    font-weight:500;
+}
+.navigation{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.navigation > a{
+    color: teal;
+    font-size: 1.1rem;
+}
+.navigation > a:hover{
+    color: rgb(163, 163, 163);
+}
+.navigation > a.nav_a{
+    border-radius: 2rem;
+    padding: .5rem 2rem;
+    background: teal;
+    color: white;
+}
+.navigation > a.nav_a:hover{
+    background: rgb(57, 158, 158);
+}
+.body{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.body .showcase_title{
+    font-size: clamp(2rem, 5vw,3rem);
+    line-height: clamp(2rem, 5vw,2.5rem);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: teal;
+}
+.body > a{
+    border-radius: 2rem;
+    padding: .5rem 2rem;
+    background: teal;
+    color: white;
+}
+.body > a:hover{
+    background: rgb(57, 158, 158);
+}
+
+.client_menu { 
+    display: none;
+ }
