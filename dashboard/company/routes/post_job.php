@@ -15,6 +15,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $maximum_salary = mysqli_value($con,"maximum_salary");
     $currency_symbol = mysqli_value($con,"currency_symbol");
     $description = $_POST["description"];
+    $time_type = mysqli_value($con,"time_type");
 
     function message($status,$message){
         $msg = array(
@@ -54,7 +55,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         `j_min`,
         `j_max`,
         `j_currency_symbol`,
-        `j_description`
+        `j_description`,
+        `time_type`
     )
     VALUES(
         $u_id,
@@ -63,7 +65,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $minimum_salary,
         $maximum_salary,
         '$currency_symbol',
-        '$description'
+        '$description',
+        '$time_type'
     )
     ");
 

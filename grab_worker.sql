@@ -14,8 +14,8 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-
-CREATE TABLE `tbl_accounts` (
+-- Dumping structure for table grab_worker.tbl_accounts
+CREATE TABLE IF NOT EXISTS `tbl_accounts` (
   `id` int NOT NULL AUTO_INCREMENT,
   `firstname` varchar(50) NOT NULL,
   `lastname` varchar(50) NOT NULL,
@@ -44,11 +44,11 @@ CREATE TABLE `tbl_accounts` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-
-INSERT INTO `tbl_accounts` (`id`, `firstname`, `lastname`, `cnum`, `bday`, `age`, `address`, `email`, `password`, `type`, `verification_state`, `avatar`, `department`, `facebook`, `linkedin`, `instagram`, `degree_title`, `school_name`, `school_address`, `school_year_attended`, `achievement`, `created_at`, `updated_at`, `status_id`, `prof_id_image`) VALUES
-	(6, 'admin', 'admin', '09093939708', '2001-08-30', 25, '739 G. Araneta Avenue 1100', 'admin@connect.com', '1234', 1, 0, 'avatar_default.png', 'none', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-08-03 10:15:03', '2022-12-18 05:46:33', 1, NULL),
-	(7, 'company', 'company', '09093939705', '2022-09-10', 25, 'Rm. 202 Grace Building Ortigas Avenue Greenhills 1500', 'company@connect.com', '1234', 2, 2, 'avatar_default.png', 'none', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-08-03 10:33:47', '2022-12-18 05:44:35', 1, NULL),
-	(8, 'client', 'client', '09486502742', '2002-02-22', 25, 'P. Burgos Street corner Caseres Street', 'client@connect.com', '1234', 3, 2, 'avatar_default.png', 'I.T', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-08-03 10:34:28', '2022-12-18 05:57:38', 1, NULL),
+-- Dumping data for table grab_worker.tbl_accounts: ~16 rows (approximately)
+INSERT IGNORE INTO `tbl_accounts` (`id`, `firstname`, `lastname`, `cnum`, `bday`, `age`, `address`, `email`, `password`, `type`, `verification_state`, `avatar`, `department`, `facebook`, `linkedin`, `instagram`, `degree_title`, `school_name`, `school_address`, `school_year_attended`, `achievement`, `created_at`, `updated_at`, `status_id`, `prof_id_image`) VALUES
+	(6, 'admin', 'admin', '09093939708', '2001-08-30', 25, '739 G. Araneta Avenue 1100', 'admin@connect.com', '1234', 1, 0, 'avatar_default.png', 'none', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-08-03 10:15:03', '2022-12-18 15:07:41', 1, NULL),
+	(7, 'company', 'company', '09093939705', '2022-09-10', 25, 'Rm. 202 Grace Building Ortigas Avenue Greenhills 1500', 'company@connect.com', '1234', 2, 2, 'avatar_default.png', 'none', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-08-03 10:33:47', '2022-12-28 04:44:54', 1, NULL),
+	(8, 'client', 'client', '09486502742', '2002-02-22', 25, 'P. Burgos Street corner Caseres Street', 'client@connect.com', '1234', 3, 2, 'avatar_default.png', 'I.T', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-08-03 10:34:28', '2022-12-28 04:38:41', 1, NULL),
 	(9, 'client1', 'client1', '09755983121', '2002-02-22', 25, '#26 mBaguio First Hotel, Bonifacio Street', 'client1@connect.com', '1234', 3, 2, 'avatar_default.png', 'I.T', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-08-03 10:34:28', '2022-12-13 05:37:42', 1, NULL),
 	(10, '1', '1', '09093939708', '2022-09-15', 12, '12121', '1234@yahoo.com', '123456789', 2, 0, 'avatar_default.png', 'none', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-09-14 09:06:23', '2022-12-14 21:16:05', 1, NULL),
 	(12, 'marvin', 'villanea', '09486502742', '2006-02-07', 21, 'Purok 2, Tibanga-Saray', 'marvinvillanea1@gmail.com', 'marvin123', 3, 2, 'avatar_default.png', 'I.T', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-11-14 15:56:26', '2022-12-18 02:59:32', 1, NULL),
@@ -60,11 +60,11 @@ INSERT INTO `tbl_accounts` (`id`, `firstname`, `lastname`, `cnum`, `bday`, `age`
 	(20, 'VILLANEA', 'MARVIN', '09755983121', '2022-12-18', 23, 'testing123', 'marvinvillanea123211@gmail.com', 'marvinvillanea123211', 3, 0, 'avatar_default.png', 'I.T', 'https://www.facebook.com/', 'https://www.facebook.com/', 'https://www.facebook.com/', 'Bachelor Science Technoilogy', 'Fernando Jose Torres', 'Morales Str', '6', 'honor', '2022-12-18 03:12:19', '2022-12-18 03:12:59', 1, '../../assets/images/dc40fd27393a0ab2aa3733c15d55aa5c.png'),
 	(21, 'VILLANEA', 'MARVIN', '09755983121', '2022-12-18', 23, 'testing123', 'jobseekerrrr@gmail.com', 'jobseekerrrr', 3, 2, 'avatar_default.png', 'I.T', 'https://www.facebook.com/', 'https://www.facebook.com/', 'https://www.facebook.com/', 'Bachelor Science Technoilogy', 'VILLANEA MARVIN', 'Purok 2, Ti', '23', 'dsafdasf', '2022-12-18 04:23:55', '2022-12-18 04:27:57', 1, '../../assets/images/93311be957191d7f3cd0fb36c674f3be.png'),
 	(22, 'VILLANEA', 'MARVIN', '09755983121', '2022-12-18', 21, 'testing123', 'jobseekerrrr123@gmail.com', 'jobseekerrrr123', 3, 2, 'avatar_default.png', 'I.T', 'https://www.facebook.com/messages/t/100038846283830', 'https://www.facebook.com/messages/t/100038846283830', 'https://www.facebook.com/messages/t/100038846283830', 'Bachelor Science Technoilogy', 'VILLANEA MARVIN', 'Purok 2, Ti', '23', '13', '2022-12-18 04:26:04', '2022-12-18 05:56:44', 1, '../../assets/images/6bc67e4d360f2c1038458c6bb288ee78.png'),
-	(23, 'VILLANEA', 'MARVIN', '09755983121', '2022-12-18', 21, 'Tesing', 'marvinvillanea1233333@gmail.com', 'marvinvillanea1233333', 3, 2, 'avatar_default.png', '123', 'https://www.facebook.com/messages/t/100038846283830', 'https://www.facebook.com/messages/t/100038846283830', 'https://www.facebook.com/messages/t/100038846283830', 'Bachelor Science Technoilogy', 'VILLANEA MARVIN', 'Purok 2, Ti', '23', '3123123', '2022-12-18 05:43:23', '2022-12-18 05:43:28', 1, '../../assets/images/e4a59f829a7698c6c6ad2cf2b2c8bcca.png'),
-	(24, 'VILLANEA', 'MARVIN', '09755983121', '2022-12-18', 23, 'testing123', 'marvinvillanea1222332@gmail.com', 'marvinvillanea1222332', 2, 0, 'avatar_default.png', 'none', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-18 05:46:17', '2022-12-18 05:50:36', 1, '../../assets/images/5da41dbe047669acba1829f34fd604a1.png');
+	(23, 'VILLANEA', 'MARVIN', '09755983121', '2022-12-18', 21, 'Tesing', 'marvinvillanea1233333@gmail.com', 'marvinvillanea1233333', 3, 2, 'avatar_default.png', '123', 'https://www.facebook.com/messages/t/100038846283830', 'https://www.facebook.com/messages/t/100038846283830', 'https://www.facebook.com/messages/t/100038846283830', 'Bachelor Science Technoilogy', 'VILLANEA MARVIN', 'Purok 2, Ti', '23', '3123123', '2022-12-18 05:43:23', '2022-12-18 15:03:00', 1, '../../assets/images/e4a59f829a7698c6c6ad2cf2b2c8bcca.png'),
+	(24, 'VILLANEA', 'MARVIN', '09755983121', '2022-12-18', 23, 'testing123', 'marvinvillanea1222332@gmail.com', 'marvinvillanea1222332', 2, 0, 'avatar_default.png', 'none', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-18 05:46:17', '2022-12-18 14:46:30', 1, '../../assets/images/5da41dbe047669acba1829f34fd604a1.png');
 
-
-CREATE TABLE `tbl_applicants` (
+-- Dumping structure for table grab_worker.tbl_applicants
+CREATE TABLE IF NOT EXISTS `tbl_applicants` (
   `id` int NOT NULL AUTO_INCREMENT,
   `companyid` int NOT NULL,
   `applicantsid` int NOT NULL,
@@ -72,9 +72,10 @@ CREATE TABLE `tbl_applicants` (
   `status` int NOT NULL DEFAULT '1' COMMENT '1=pending\r\n2=hired\r\n3=decline',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-INSERT INTO `tbl_applicants` (`id`, `companyid`, `applicantsid`, `jobid`, `status`, `created_at`) VALUES
+-- Dumping data for table grab_worker.tbl_applicants: ~15 rows (approximately)
+INSERT IGNORE INTO `tbl_applicants` (`id`, `companyid`, `applicantsid`, `jobid`, `status`, `created_at`) VALUES
 	(1, 4, 8, 3, 1, '2022-08-12 06:00:44'),
 	(2, 4, 8, 3, 1, '2022-08-12 06:00:44'),
 	(3, 5, 8, 3, 2, '2022-08-12 06:00:44'),
@@ -83,10 +84,17 @@ INSERT INTO `tbl_applicants` (`id`, `companyid`, `applicantsid`, `jobid`, `statu
 	(7, 5, 8, 2, 3, '2022-11-15 02:06:55'),
 	(8, 5, 9, 2, 1, '2022-11-28 14:19:16'),
 	(9, 5, 9, 14, 1, '2022-11-29 02:05:32'),
-	(10, 4, 22, 3, 1, '2022-12-18 04:26:16');
+	(10, 4, 22, 3, 1, '2022-12-18 04:26:16'),
+	(11, 12, 23, 29, 2, '2022-12-18 13:09:16'),
+	(12, 5, 23, 27, 2, '2022-12-18 14:19:23'),
+	(13, 5, 23, 31, 1, '2022-12-18 14:32:12'),
+	(14, 5, 23, 22, 1, '2022-12-18 14:34:21'),
+	(15, 5, 23, 24, 1, '2022-12-18 14:47:59'),
+	(16, 5, 23, 32, 2, '2022-12-18 15:06:14'),
+	(17, 5, 8, 31, 1, '2022-12-28 03:27:21');
 
-
-CREATE TABLE `tbl_company` (
+-- Dumping structure for table grab_worker.tbl_company
+CREATE TABLE IF NOT EXISTS `tbl_company` (
   `id` int NOT NULL AUTO_INCREMENT,
   `userid` int NOT NULL,
   `c_logo` varchar(70) NOT NULL DEFAULT 'company_logo_default.png',
@@ -100,8 +108,8 @@ CREATE TABLE `tbl_company` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-
-INSERT INTO `tbl_company` (`id`, `userid`, `c_logo`, `c_banner`, `c_name`, `c_address`, `c_cnum`, `c_position`, `department`, `created_at`) VALUES
+-- Dumping data for table grab_worker.tbl_company: ~9 rows (approximately)
+INSERT IGNORE INTO `tbl_company` (`id`, `userid`, `c_logo`, `c_banner`, `c_name`, `c_address`, `c_cnum`, `c_position`, `department`, `created_at`) VALUES
 	(4, 6, 'company_logo_default.png', 'company_banner_default.png', 'D Devs', 'Manila, Metro Manila', '09093939708', 'I.T', 'I.T', '2022-08-03 10:15:03'),
 	(5, 7, 'company_logo_default.png', 'company_banner_default.png', 'Fux Devs', 'Manila, Metro Manila', '09093939708', 'I.T', 'I.T', '2022-08-03 10:33:47'),
 	(6, 8, 'company_logo_default.png', 'company_banner_default.png', 'Metro Ui', 'Manila, Metro Manila', '09093939708', 'Advertiser', 'I.T', '2022-08-03 10:34:28'),
@@ -112,8 +120,8 @@ INSERT INTO `tbl_company` (`id`, `userid`, `c_logo`, `c_banner`, `c_name`, `c_ad
 	(11, 19, 'company_logo_default.png', 'company_banner_default.png', 'GOOGLE', 'New York', '09755983121', 'Web Developer', 'IT', '2022-12-18 03:04:51'),
 	(12, 24, 'company_logo_default.png', 'company_banner_default.png', 'ggg', '2313123', '09755983121', 'ggg', 'dasfadsfas', '2022-12-18 05:46:17');
 
-
-CREATE TABLE `tbl_company_reports` (
+-- Dumping structure for table grab_worker.tbl_company_reports
+CREATE TABLE IF NOT EXISTS `tbl_company_reports` (
   `id` int NOT NULL AUTO_INCREMENT,
   `company_id` int NOT NULL,
   `reported_by` int NOT NULL,
@@ -122,14 +130,14 @@ CREATE TABLE `tbl_company_reports` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-
-INSERT INTO `tbl_company_reports` (`id`, `company_id`, `reported_by`, `message`, `created_at`) VALUES
+-- Dumping data for table grab_worker.tbl_company_reports: ~3 rows (approximately)
+INSERT IGNORE INTO `tbl_company_reports` (`id`, `company_id`, `reported_by`, `message`, `created_at`) VALUES
 	(1, 4, 8, 'Miss leading information', '2022-08-26 18:35:28'),
 	(2, 4, 8, 'Miss leading information', '2022-08-26 18:35:28'),
 	(3, 4, 8, 'asdasdsa', '2022-09-01 23:43:15');
 
-
-CREATE TABLE `tbl_jobs` (
+-- Dumping structure for table grab_worker.tbl_jobs
+CREATE TABLE IF NOT EXISTS `tbl_jobs` (
   `id` int NOT NULL AUTO_INCREMENT,
   `userid` int NOT NULL,
   `j_name` varchar(50) NOT NULL,
@@ -140,43 +148,53 @@ CREATE TABLE `tbl_jobs` (
   `j_description` text NOT NULL,
   `j_created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `status_type` int DEFAULT '0' COMMENT '0 = active , 1 = not active',
+  `time_type` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+-- Dumping data for table grab_worker.tbl_jobs: ~37 rows (approximately)
+INSERT IGNORE INTO `tbl_jobs` (`id`, `userid`, `j_name`, `j_age`, `j_min`, `j_max`, `j_currency_symbol`, `j_description`, `j_created_at`, `status_type`, `time_type`) VALUES
+	(1, 7, 'I.T', 18, 15000, 200000, '₱', '<p>Solary</p>\r\n', '2022-08-04 16:46:17', 0, 'Freelancer'),
+	(2, 7, 'Social Media Avertiser', 18, 10000, 200000, '₱', 'Solary', '2022-08-04 16:46:17', 0, NULL),
+	(3, 6, 'Back End Developer', 18, 15000, 20000, '₱', '<p><strong>Bruh</strong></p>\r\n', '2022-08-11 21:22:23', 0, NULL),
+	(4, 7, 'PHP Dev', 21, 15000, 30000, '₱', '<p>Hi</p>\r\n', '2022-09-14 10:23:22', 0, NULL),
+	(5, 7, '1', 50, 1, 1, '₱', '<p>1</p>\r\n', '2022-09-14 10:24:26', 0, NULL),
+	(6, 7, 'Marvin', 56, 2000, 3000, '₱', '<p>Helooo wafdafdsa</p>\r\n', '2022-11-28 16:48:40', 0, NULL),
+	(7, 7, 'Marvin', 56, 2000, 3000, '₱', '<p>Helooo wafdafdsa</p>\r\n', '2022-11-28 16:48:44', 0, NULL),
+	(8, 7, 'TESTIN', 24, 23333, 23333, '₱', '<p>DSAFADSFDASFASF</p>\r\n', '2022-11-28 17:05:43', 0, NULL),
+	(9, 7, 'TESTIN', 24, 23333, 23333, '₱', '<p>HELO GOODMINRONG</p>\r\n', '2022-11-28 17:05:46', 0, NULL),
+	(10, 7, 'TESTIN', 24, 23333, 23333, '₱', '<p>HELO GOODMINRONG</p>\r\n', '2022-11-28 17:05:51', 0, NULL),
+	(11, 7, 'Web Developer', 130, 30000, 30000, '₱', '<p>Hello team good day, We&#39;re hiring a developer to create devveloper</p>\r\n', '2022-11-28 17:07:26', 0, NULL),
+	(12, 7, 'Web Developer', 130, 30000, 30000, '₱', '<p>Hello team good day, We&#39;re hiring a developer to create devveloper.<br />\r\nTesting&nbsp;</p>\r\n', '2022-11-28 17:07:31', 0, NULL),
+	(13, 7, 'Web Developer', 23, 30000, 30000, '₱', '<p>Hello team good day, We&#39;re hiring a developer to create devveloper.<br />\r\nTesting&nbsp;</p>\r\n', '2022-11-28 17:07:41', 0, NULL),
+	(14, 7, 'Web Developer', 23, 30000, 30000, '₱', '<p>Hello team good day, We&#39;re hiring a developer to create devveloper.<br />\r\nTesting&nbsp;</p>\r\n', '2022-11-28 17:07:49', 0, NULL),
+	(15, 7, 'Web Developer', 23, 30000, 30000, '₱', '<p>Hello team good day, We&#39;re hiring a developer to create devveloper.<br />\r\nTesting&nbsp;</p>\r\n', '2022-11-28 17:07:50', 0, NULL),
+	(16, 7, 'Web Developer', 32, 30000, 30000, '₱', '<p>Hello team good day, We&#39;re hiring a developer to create devveloper.<br />\r\nTesting&nbsp;</p>\r\n', '2022-11-28 17:08:11', 0, NULL),
+	(17, 7, 'Marvin', 42, 30000, 30000, '₱', '<p>HRLLO WOLRD</p>\r\n', '2022-11-28 17:11:19', 0, NULL),
+	(18, 7, 'Marvin', 42, 30000, 30000, '₱', '<p>HRLLO WOLRDDASFDASFDASF</p>\r\n', '2022-11-28 17:13:14', 0, NULL),
+	(19, 7, 'Marvin3232', 39, 30000, 30000, '₱', '<p>HRLLO WOLRDDASFDASFDASF</p>\r\n', '2022-11-28 17:21:18', 0, NULL),
+	(20, 7, 'PHP PROGRAMMER ', 39, 30000, 30000, '₱', '<p>HRLLO WOLRDDASFDASFDASF</p>\r\n', '2022-11-28 17:22:50', 0, NULL),
+	(21, 7, 'Web Developer Testinggggffff', 24, 2222, 2222, '₱', '<p>2222</p>\r\n', '2022-11-28 18:18:25', 0, NULL),
+	(22, 7, 'Web Developer', 23, 2333, 2333, '₱', 'dsafdsafdasfasdfdsaf', '2022-11-28 18:25:27', 0, NULL),
+	(23, 7, 'Web Developer Testindsafdasfadsf', 21, 12313, 12313, '₱', '<p>1234</p>\r\n', '2022-11-28 18:26:31', 0, NULL),
+	(24, 7, 'Web Developer TAE', 18, 5000, 50000, '₱', '<p>dsaf</p>\r\n', '2022-11-28 18:33:44', 0, NULL),
+	(25, 7, 'TESTIN tae', 50, 50000, 49998, '₱', '<p>afdasfdasfdasf</p>\r\n', '2022-11-28 18:34:21', 0, NULL),
+	(26, 7, 'Web Developer Testingggg TAEEEEE', 60, 5000, 50000, '₱', '<p>DFSAFDASFDSAFADSF</p>\r\n', '2022-11-28 18:34:55', 0, NULL),
+	(27, 7, 'Web Developer Testingggg fsdgfdsgfsdg', 50, 50000, 50000, '₱', '<p>dsafdsafdasfas</p>\r\n', '2022-11-28 18:35:22', 0, NULL),
+	(28, 19, 'Web Developer', 18, 5000, 5000, '₱', '<p>dsa</p>\r\n', '2022-12-18 04:32:27', 1, NULL),
+	(29, 24, 'Fullstack Developer', 18, 50000, 50000, '₱', '<p>Skill<br />\r\nHtml</p>\r\n', '2022-12-18 05:56:00', 0, NULL),
+	(30, 7, 'Web Developer TAE', 23, 1222, 1222, '₱', '<p>dsafdsafdsafadf</p>\r\n', '2022-12-18 14:25:21', 0, NULL),
+	(31, 7, 'Web Developer TAE', 23, 1222, 1222, '₱', '<p>dsafdsafdsafadf</p>\r\n', '2022-12-18 14:25:24', 0, NULL),
+	(32, 7, 'Software Engineer Senior', 20, 20000, 200000, '₱', '<p><strong>Vacany 10</strong></p>\r\n', '2022-12-18 15:05:45', 0, NULL),
+	(33, 7, 'My baby', 23, 5000, 5000, '₱', '<p>dsafasfsadfaadsfadfdsafd</p>\r\n', '2022-12-28 03:36:22', 0, 'Part-Time'),
+	(34, 7, 'My baby', 23, 5000, 5000, '₱', '<p>dsafasfsadfaadsfadfdsafd</p>\r\n', '2022-12-28 03:36:25', 0, 'Part-Time'),
+	(35, 7, 'My baby', 23, 5000, 5000, '₱', '<p>dsafasfsadfaadsfadfdsafd</p>\r\n', '2022-12-28 03:36:28', 0, 'Part-Time'),
+	(36, 7, 'My baby', 23, 5000, 5000, '₱', '<p>dsafasfsadfaadsfadfdsafd</p>\r\n', '2022-12-28 03:36:30', 0, 'Part-Time'),
+	(37, 7, 'My baby', 23, 5000, 5000, '₱', '<p>dsafasfsadfaadsfadfdsafd</p>\r\n', '2022-12-28 03:36:33', 0, 'Part-Time'),
+	(38, 7, 'Security Guard', 24, 8000, 16000, '₱', '<h4>Job Description</h4>\r\n\r\n<p>The IT Support maintains the computer networks of all types of organizations, providing technical support and ensuring the whole company runs smoothly. IT Support monitors and maintains the company computer systems, installs, and configures hardware and software, and solves technical issues as they arise.</p>\r\n', '2022-12-28 04:46:46', 0, 'Full-Time');
 
-INSERT INTO `tbl_jobs` (`id`, `userid`, `j_name`, `j_age`, `j_min`, `j_max`, `j_currency_symbol`, `j_description`, `j_created_at`, `status_type`) VALUES
-	(1, 7, 'I.T', 18, 15000, 200000, '₱', '<p>Solary</p>\r\n', '2022-08-04 16:46:17', 0),
-	(2, 7, 'Social Media Avertiser', 18, 10000, 200000, '₱', 'Solary', '2022-08-04 16:46:17', 0),
-	(3, 6, 'Back End Developer', 18, 15000, 20000, '₱', '<p><strong>Bruh</strong></p>\r\n', '2022-08-11 21:22:23', 0),
-	(4, 7, 'PHP Dev', 21, 15000, 30000, '₱', '<p>Hi</p>\r\n', '2022-09-14 10:23:22', 0),
-	(5, 7, '1', 50, 1, 1, '₱', '<p>1</p>\r\n', '2022-09-14 10:24:26', 0),
-	(6, 7, 'Marvin', 56, 2000, 3000, '₱', '<p>Helooo wafdafdsa</p>\r\n', '2022-11-28 16:48:40', 0),
-	(7, 7, 'Marvin', 56, 2000, 3000, '₱', '<p>Helooo wafdafdsa</p>\r\n', '2022-11-28 16:48:44', 0),
-	(8, 7, 'TESTIN', 24, 23333, 23333, '₱', '<p>DSAFADSFDASFASF</p>\r\n', '2022-11-28 17:05:43', 0),
-	(9, 7, 'TESTIN', 24, 23333, 23333, '₱', '<p>HELO GOODMINRONG</p>\r\n', '2022-11-28 17:05:46', 0),
-	(10, 7, 'TESTIN', 24, 23333, 23333, '₱', '<p>HELO GOODMINRONG</p>\r\n', '2022-11-28 17:05:51', 0),
-	(11, 7, 'Web Developer', 130, 30000, 30000, '₱', '<p>Hello team good day, We&#39;re hiring a developer to create devveloper</p>\r\n', '2022-11-28 17:07:26', 0),
-	(12, 7, 'Web Developer', 130, 30000, 30000, '₱', '<p>Hello team good day, We&#39;re hiring a developer to create devveloper.<br />\r\nTesting&nbsp;</p>\r\n', '2022-11-28 17:07:31', 0),
-	(13, 7, 'Web Developer', 23, 30000, 30000, '₱', '<p>Hello team good day, We&#39;re hiring a developer to create devveloper.<br />\r\nTesting&nbsp;</p>\r\n', '2022-11-28 17:07:41', 0),
-	(14, 7, 'Web Developer', 23, 30000, 30000, '₱', '<p>Hello team good day, We&#39;re hiring a developer to create devveloper.<br />\r\nTesting&nbsp;</p>\r\n', '2022-11-28 17:07:49', 0),
-	(15, 7, 'Web Developer', 23, 30000, 30000, '₱', '<p>Hello team good day, We&#39;re hiring a developer to create devveloper.<br />\r\nTesting&nbsp;</p>\r\n', '2022-11-28 17:07:50', 0),
-	(16, 7, 'Web Developer', 32, 30000, 30000, '₱', '<p>Hello team good day, We&#39;re hiring a developer to create devveloper.<br />\r\nTesting&nbsp;</p>\r\n', '2022-11-28 17:08:11', 0),
-	(17, 7, 'Marvin', 42, 30000, 30000, '₱', '<p>HRLLO WOLRD</p>\r\n', '2022-11-28 17:11:19', 0),
-	(18, 7, 'Marvin', 42, 30000, 30000, '₱', '<p>HRLLO WOLRDDASFDASFDASF</p>\r\n', '2022-11-28 17:13:14', 0),
-	(19, 7, 'Marvin3232', 39, 30000, 30000, '₱', '<p>HRLLO WOLRDDASFDASFDASF</p>\r\n', '2022-11-28 17:21:18', 0),
-	(20, 7, 'PHP PROGRAMMER ', 39, 30000, 30000, '₱', '<p>HRLLO WOLRDDASFDASFDASF</p>\r\n', '2022-11-28 17:22:50', 0),
-	(21, 7, 'Web Developer Testinggggffff', 24, 2222, 2222, '₱', '<p>2222</p>\r\n', '2022-11-28 18:18:25', 0),
-	(22, 7, 'Web Developer', 23, 2333, 2333, '₱', 'dsafdsafdasfasdfdsaf', '2022-11-28 18:25:27', 0),
-	(23, 7, 'Web Developer Testindsafdasfadsf', 21, 12313, 12313, '₱', '<p>1234</p>\r\n', '2022-11-28 18:26:31', 0),
-	(24, 7, 'Web Developer TAE', 18, 5000, 50000, '₱', '<p>dsaf</p>\r\n', '2022-11-28 18:33:44', 0),
-	(25, 7, 'TESTIN tae', 50, 50000, 49998, '₱', '<p>afdasfdasfdasf</p>\r\n', '2022-11-28 18:34:21', 0),
-	(26, 7, 'Web Developer Testingggg TAEEEEE', 60, 5000, 50000, '₱', '<p>DFSAFDASFDSAFADSF</p>\r\n', '2022-11-28 18:34:55', 0),
-	(27, 7, 'Web Developer Testingggg fsdgfdsgfsdg', 50, 50000, 50000, '₱', '<p>dsafdsafdasfas</p>\r\n', '2022-11-28 18:35:22', 0),
-	(28, 19, 'Web Developer', 18, 5000, 5000, '₱', '<p>dsa</p>\r\n', '2022-12-18 04:32:27', 1),
-	(29, 24, 'Fullstack Developer', 18, 50000, 50000, '₱', '<p>Skill<br />\r\nHtml</p>\r\n', '2022-12-18 05:56:00', 0);
-
-
-CREATE TABLE `tbl_notification` (
+-- Dumping structure for table grab_worker.tbl_notification
+CREATE TABLE IF NOT EXISTS `tbl_notification` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `user_id` bigint NOT NULL DEFAULT '0',
   `description` varchar(255) NOT NULL DEFAULT '0',
@@ -184,10 +202,10 @@ CREATE TABLE `tbl_notification` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=144 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-
-INSERT INTO `tbl_notification` (`id`, `user_id`, `description`, `status`, `created_at`, `updated_at`) VALUES
+-- Dumping data for table grab_worker.tbl_notification: ~88 rows (approximately)
+INSERT IGNORE INTO `tbl_notification` (`id`, `user_id`, `description`, `status`, `created_at`, `updated_at`) VALUES
 	(1, 3, 'You`re hired, Hello $fullname, We see your resume and you have good potential for this kind of job $job_name , Please contact us on $company_cnum. - $company_name.', 0, '2022-11-14 15:05:23', '2022-11-14 15:05:23'),
 	(2, 3, 'Hello client client, Your application for this position Back End Developer was declined - Fux Devs.', 0, '2022-11-14 15:07:13', '2022-11-14 15:07:13'),
 	(3, 3, 'You`re hired, Hello client client, We see your resume and you have good potential for this kind of job Back End Developer , Please contact us on 09093939708. - Fux Devs.', 0, '2022-11-14 15:07:36', '2022-11-14 15:07:36'),
@@ -239,36 +257,128 @@ INSERT INTO `tbl_notification` (`id`, `user_id`, `description`, `status`, `creat
 	(49, 9, 'LocalMJob \n Hello client1, Fux Devs has new open job Web Developer Testingggg fsdgfdsgfsdg.', 0, '2022-11-28 18:35:22', '2022-11-28 18:35:22'),
 	(50, 12, 'LocalMJob \n Hello marvin, Fux Devs has new open job Web Developer Testingggg fsdgfdsgfsdg.', 1, '2022-11-28 18:35:22', '2022-12-18 03:00:02'),
 	(51, 7, 'Company, Company, Applying for  Web Developer', 1, '2022-11-29 02:05:32', '2022-11-29 02:05:41'),
-	(52, 6, 'Admin, Admin, Applying for  Back End Developer', 0, '2022-12-18 04:26:16', '2022-12-18 04:26:16');
+	(52, 6, 'Admin, Admin, Applying for  Back End Developer', 0, '2022-12-18 04:26:16', '2022-12-18 04:26:16'),
+	(53, 24, 'MARVIN, VILLANEA, Applying for  Fullstack Developer', 1, '2022-12-18 13:09:16', '2022-12-18 13:17:45'),
+	(54, 23, 'You`re hired, Hello VILLANEA MARVIN, We see your resume and you have good potential for this kind of job Fullstack Developer , Please contact us on 09755983121. - ggg. And congratulation!....... please be ready for your interview', 1, '2022-12-18 13:31:21', '2022-12-18 14:19:32'),
+	(55, 7, 'Company, Company, Applying for  Web Developer Testingggg Fsdgfdsgfsdg', 1, '2022-12-18 14:19:23', '2022-12-18 14:19:41'),
+	(56, 23, 'You`re hired, Hello VILLANEA MARVIN, We see your resume and you have good potential for this kind of job Web Developer Testingggg fsdgfdsgfsdg , Please contact us on 09093939708. - Fux Devs. And congratulation!....... please be ready for your interview', 1, '2022-12-18 14:23:03', '2022-12-18 14:23:09'),
+	(57, 8, 'LocalMJob \n Hello client, Fux Devs has new open job Web Developer TAE.', 0, '2022-12-18 14:25:21', '2022-12-18 14:25:21'),
+	(58, 9, 'LocalMJob \n Hello client1, Fux Devs has new open job Web Developer TAE.', 0, '2022-12-18 14:25:21', '2022-12-18 14:25:21'),
+	(59, 12, 'LocalMJob \n Hello marvin, Fux Devs has new open job Web Developer TAE.', 0, '2022-12-18 14:25:21', '2022-12-18 14:25:21'),
+	(60, 15, 'LocalMJob \n Hello VILLANEA, Fux Devs has new open job Web Developer TAE.', 0, '2022-12-18 14:25:22', '2022-12-18 14:25:22'),
+	(61, 18, 'LocalMJob \n Hello VILLANEA, Fux Devs has new open job Web Developer TAE.', 0, '2022-12-18 14:25:22', '2022-12-18 14:25:22'),
+	(62, 20, 'LocalMJob \n Hello VILLANEA, Fux Devs has new open job Web Developer TAE.', 0, '2022-12-18 14:25:22', '2022-12-18 14:25:22'),
+	(63, 21, 'LocalMJob \n Hello VILLANEA, Fux Devs has new open job Web Developer TAE.', 0, '2022-12-18 14:25:22', '2022-12-18 14:25:22'),
+	(64, 22, 'LocalMJob \n Hello VILLANEA, Fux Devs has new open job Web Developer TAE.', 0, '2022-12-18 14:25:23', '2022-12-18 14:25:23'),
+	(65, 23, 'LocalMJob \n Hello VILLANEA, Fux Devs has new open job Web Developer TAE.', 1, '2022-12-18 14:25:23', '2022-12-18 14:25:40'),
+	(66, 8, 'LocalMJob \n Hello client, Fux Devs has new open job Web Developer TAE.', 0, '2022-12-18 14:25:24', '2022-12-18 14:25:24'),
+	(67, 9, 'LocalMJob \n Hello client1, Fux Devs has new open job Web Developer TAE.', 0, '2022-12-18 14:25:24', '2022-12-18 14:25:24'),
+	(68, 12, 'LocalMJob \n Hello marvin, Fux Devs has new open job Web Developer TAE.', 0, '2022-12-18 14:25:24', '2022-12-18 14:25:24'),
+	(69, 15, 'LocalMJob \n Hello VILLANEA, Fux Devs has new open job Web Developer TAE.', 0, '2022-12-18 14:25:25', '2022-12-18 14:25:25'),
+	(70, 18, 'LocalMJob \n Hello VILLANEA, Fux Devs has new open job Web Developer TAE.', 0, '2022-12-18 14:25:25', '2022-12-18 14:25:25'),
+	(71, 20, 'LocalMJob \n Hello VILLANEA, Fux Devs has new open job Web Developer TAE.', 0, '2022-12-18 14:25:25', '2022-12-18 14:25:25'),
+	(72, 21, 'LocalMJob \n Hello VILLANEA, Fux Devs has new open job Web Developer TAE.', 0, '2022-12-18 14:25:26', '2022-12-18 14:25:26'),
+	(73, 22, 'LocalMJob \n Hello VILLANEA, Fux Devs has new open job Web Developer TAE.', 0, '2022-12-18 14:25:26', '2022-12-18 14:25:26'),
+	(74, 23, 'LocalMJob \n Hello VILLANEA, Fux Devs has new open job Web Developer TAE.', 1, '2022-12-18 14:25:26', '2022-12-18 14:25:37'),
+	(75, 7, 'Company, Company, Applying for  Web Developer TAE', 1, '2022-12-18 14:32:12', '2022-12-18 14:32:22'),
+	(76, 7, 'Company, Company, Applying for  Web Developer', 1, '2022-12-18 14:34:21', '2022-12-18 14:34:25'),
+	(77, 7, 'Company, Company, Applying for  Web Developer TAE', 1, '2022-12-18 14:47:59', '2022-12-18 14:48:12'),
+	(78, 8, 'Grab A Worker \n Hello client, Fux Devs has new open job Software Engineer Senior.', 0, '2022-12-18 15:05:45', '2022-12-18 15:05:45'),
+	(79, 9, 'Grab A Worker \n Hello client1, Fux Devs has new open job Software Engineer Senior.', 0, '2022-12-18 15:05:45', '2022-12-18 15:05:45'),
+	(80, 12, 'Grab A Worker \n Hello marvin, Fux Devs has new open job Software Engineer Senior.', 0, '2022-12-18 15:05:45', '2022-12-18 15:05:45'),
+	(81, 15, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job Software Engineer Senior.', 0, '2022-12-18 15:05:46', '2022-12-18 15:05:46'),
+	(82, 18, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job Software Engineer Senior.', 0, '2022-12-18 15:05:46', '2022-12-18 15:05:46'),
+	(83, 20, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job Software Engineer Senior.', 0, '2022-12-18 15:05:46', '2022-12-18 15:05:46'),
+	(84, 21, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job Software Engineer Senior.', 0, '2022-12-18 15:05:47', '2022-12-18 15:05:47'),
+	(85, 22, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job Software Engineer Senior.', 0, '2022-12-18 15:05:47', '2022-12-18 15:05:47'),
+	(86, 23, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job Software Engineer Senior.', 1, '2022-12-18 15:05:47', '2022-12-18 15:06:05'),
+	(87, 7, 'Company, Company, Applying for  Software Engineer Senior', 1, '2022-12-18 15:06:14', '2022-12-18 15:06:20'),
+	(88, 23, 'You`re hired, Hello VILLANEA MARVIN, We see your resume and you have good potential for this kind of job Software Engineer Senior , Please contact us on 09093939708. - Fux Devs. And congratulation!....... please be ready for your interview', 1, '2022-12-18 15:07:04', '2022-12-18 15:07:10'),
+	(89, 7, 'Company, Company, Applying for  Web Developer TAE', 1, '2022-12-28 03:27:21', '2022-12-28 04:39:53'),
+	(90, 8, 'Grab A Worker \n Hello client, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:22', '2022-12-28 03:36:22'),
+	(91, 9, 'Grab A Worker \n Hello client1, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:23', '2022-12-28 03:36:23'),
+	(92, 12, 'Grab A Worker \n Hello marvin, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:23', '2022-12-28 03:36:23'),
+	(93, 15, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:23', '2022-12-28 03:36:23'),
+	(94, 18, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:24', '2022-12-28 03:36:24'),
+	(95, 20, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:24', '2022-12-28 03:36:24'),
+	(96, 21, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:24', '2022-12-28 03:36:24'),
+	(97, 22, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:25', '2022-12-28 03:36:25'),
+	(98, 23, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:25', '2022-12-28 03:36:25'),
+	(99, 8, 'Grab A Worker \n Hello client, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:25', '2022-12-28 03:36:25'),
+	(100, 9, 'Grab A Worker \n Hello client1, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:25', '2022-12-28 03:36:25'),
+	(101, 12, 'Grab A Worker \n Hello marvin, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:26', '2022-12-28 03:36:26'),
+	(102, 15, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:26', '2022-12-28 03:36:26'),
+	(103, 18, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:26', '2022-12-28 03:36:26'),
+	(104, 20, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:26', '2022-12-28 03:36:26'),
+	(105, 21, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:27', '2022-12-28 03:36:27'),
+	(106, 22, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:27', '2022-12-28 03:36:27'),
+	(107, 23, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:27', '2022-12-28 03:36:27'),
+	(108, 8, 'Grab A Worker \n Hello client, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:28', '2022-12-28 03:36:28'),
+	(109, 9, 'Grab A Worker \n Hello client1, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:28', '2022-12-28 03:36:28'),
+	(110, 12, 'Grab A Worker \n Hello marvin, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:28', '2022-12-28 03:36:28'),
+	(111, 15, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:28', '2022-12-28 03:36:28'),
+	(112, 18, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:29', '2022-12-28 03:36:29'),
+	(113, 20, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:29', '2022-12-28 03:36:29'),
+	(114, 21, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:29', '2022-12-28 03:36:29'),
+	(115, 22, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:30', '2022-12-28 03:36:30'),
+	(116, 23, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:30', '2022-12-28 03:36:30'),
+	(117, 8, 'Grab A Worker \n Hello client, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:30', '2022-12-28 03:36:30'),
+	(118, 9, 'Grab A Worker \n Hello client1, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:30', '2022-12-28 03:36:30'),
+	(119, 12, 'Grab A Worker \n Hello marvin, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:31', '2022-12-28 03:36:31'),
+	(120, 15, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:31', '2022-12-28 03:36:31'),
+	(121, 18, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:31', '2022-12-28 03:36:31'),
+	(122, 20, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:32', '2022-12-28 03:36:32'),
+	(123, 21, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:32', '2022-12-28 03:36:32'),
+	(124, 22, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:32', '2022-12-28 03:36:32'),
+	(125, 23, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:32', '2022-12-28 03:36:32'),
+	(126, 8, 'Grab A Worker \n Hello client, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:33', '2022-12-28 03:36:33'),
+	(127, 9, 'Grab A Worker \n Hello client1, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:33', '2022-12-28 03:36:33'),
+	(128, 12, 'Grab A Worker \n Hello marvin, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:33', '2022-12-28 03:36:33'),
+	(129, 15, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:34', '2022-12-28 03:36:34'),
+	(130, 18, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:34', '2022-12-28 03:36:34'),
+	(131, 20, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:34', '2022-12-28 03:36:34'),
+	(132, 21, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:34', '2022-12-28 03:36:34'),
+	(133, 22, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:35', '2022-12-28 03:36:35'),
+	(134, 23, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.', 0, '2022-12-28 03:36:35', '2022-12-28 03:36:35'),
+	(135, 8, 'Grab A Worker \n Hello client, Fux Devs has new open job Security Guard.', 0, '2022-12-28 04:46:46', '2022-12-28 04:46:46'),
+	(136, 9, 'Grab A Worker \n Hello client1, Fux Devs has new open job Security Guard.', 0, '2022-12-28 04:46:47', '2022-12-28 04:46:47'),
+	(137, 12, 'Grab A Worker \n Hello marvin, Fux Devs has new open job Security Guard.', 0, '2022-12-28 04:46:47', '2022-12-28 04:46:47'),
+	(138, 15, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job Security Guard.', 0, '2022-12-28 04:46:47', '2022-12-28 04:46:47'),
+	(139, 18, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job Security Guard.', 0, '2022-12-28 04:46:47', '2022-12-28 04:46:47'),
+	(140, 20, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job Security Guard.', 0, '2022-12-28 04:46:48', '2022-12-28 04:46:48'),
+	(141, 21, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job Security Guard.', 0, '2022-12-28 04:46:48', '2022-12-28 04:46:48'),
+	(142, 22, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job Security Guard.', 0, '2022-12-28 04:46:48', '2022-12-28 04:46:48'),
+	(143, 23, 'Grab A Worker \n Hello VILLANEA, Fux Devs has new open job Security Guard.', 0, '2022-12-28 04:46:48', '2022-12-28 04:46:48');
 
-
-CREATE TABLE `tbl_resume` (
+-- Dumping structure for table grab_worker.tbl_resume
+CREATE TABLE IF NOT EXISTS `tbl_resume` (
   `id` int NOT NULL AUTO_INCREMENT,
   `userid` int NOT NULL,
   `path` varchar(225) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-
-INSERT INTO `tbl_resume` (`id`, `userid`, `path`, `created_at`) VALUES
+-- Dumping data for table grab_worker.tbl_resume: ~6 rows (approximately)
+INSERT IGNORE INTO `tbl_resume` (`id`, `userid`, `path`, `created_at`) VALUES
 	(1, 6, 'example1.png', '2022-08-11 22:35:51'),
 	(2, 7, 'example4.png', '2022-08-11 22:35:51'),
 	(3, 8, 'example4.png', '2022-09-01 21:34:59'),
 	(4, 9, '45c48cce2e2d7fbdea1afc51c7c6ad26.jpg', '2022-11-14 14:33:18'),
-	(5, 12, 'example5.jpeg', '2022-11-14 15:58:45');
+	(5, 12, 'example5.jpeg', '2022-11-14 15:58:45'),
+	(7, 23, '37693cfc748049e45d87b8c7d8b9aacd.pdf', '2022-12-18 14:20:13');
 
-
-CREATE TABLE `tbl_sms_logs` (
+-- Dumping structure for table grab_worker.tbl_sms_logs
+CREATE TABLE IF NOT EXISTS `tbl_sms_logs` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `receiverid` bigint NOT NULL DEFAULT '0',
   `message` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=112 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=280 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-
-INSERT INTO `tbl_sms_logs` (`id`, `receiverid`, `message`, `created_at`) VALUES
+-- Dumping data for table grab_worker.tbl_sms_logs: ~103 rows (approximately)
+INSERT IGNORE INTO `tbl_sms_logs` (`id`, `receiverid`, `message`, `created_at`) VALUES
 	(69, 9, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"LocalMJob \n Hello client1, Fux Devs has new open job PHP PROGRAMMER .","to":"+6309755983121"}', '2022-11-28 17:22:50'),
 	(70, 9, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-11-28 17:22:51'),
 	(71, 12, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"LocalMJob \n Hello marvin, Fux Devs has new open job PHP PROGRAMMER .","to":"+6309486502742"}', '2022-11-28 17:22:51'),
@@ -311,10 +421,178 @@ INSERT INTO `tbl_sms_logs` (`id`, `receiverid`, `message`, `created_at`) VALUES
 	(108, 20, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 03:12:48'),
 	(109, 20, 'Client error: `POST https://api.movider.co/v1/balance` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 03:14:35'),
 	(110, 24, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Hi VILLANEA. Your Company account in LocalMJob has been approved.","to":"+6309755983121"}', '2022-12-18 05:46:49'),
-	(111, 24, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 05:46:49');
+	(111, 24, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 05:46:49'),
+	(112, 23, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"You`re hired, Hello VILLANEA MARVIN, We see your resume and you have good potential for this kind of job Fullstack Developer , Please contact us on 09755983121. - ggg. And congratulation!....... please be ready for your interview","to":"+6309755983121"}', '2022-12-18 13:31:21'),
+	(113, 23, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 13:31:22'),
+	(114, 23, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"You`re hired, Hello VILLANEA MARVIN, We see your resume and you have good potential for this kind of job Web Developer Testingggg fsdgfdsgfsdg , Please contact us on 09093939708. - Fux Devs. And congratulation!....... please be ready for your interview","to":"+6309755983121"}', '2022-12-18 14:23:03'),
+	(115, 23, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 14:23:03'),
+	(116, 8, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"LocalMJob \n Hello client, Fux Devs has new open job Web Developer TAE.","to":"+6309486502742"}', '2022-12-18 14:25:21'),
+	(117, 8, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 14:25:21'),
+	(118, 9, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"LocalMJob \n Hello client1, Fux Devs has new open job Web Developer TAE.","to":"+6309755983121"}', '2022-12-18 14:25:21'),
+	(119, 9, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 14:25:21'),
+	(120, 12, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"LocalMJob \n Hello marvin, Fux Devs has new open job Web Developer TAE.","to":"+6309486502742"}', '2022-12-18 14:25:21'),
+	(121, 12, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 14:25:22'),
+	(122, 15, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"LocalMJob \n Hello VILLANEA, Fux Devs has new open job Web Developer TAE.","to":"+6309755983121"}', '2022-12-18 14:25:22'),
+	(123, 15, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 14:25:22'),
+	(124, 18, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"LocalMJob \n Hello VILLANEA, Fux Devs has new open job Web Developer TAE.","to":"+6309755983121"}', '2022-12-18 14:25:22'),
+	(125, 18, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 14:25:22'),
+	(126, 20, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"LocalMJob \n Hello VILLANEA, Fux Devs has new open job Web Developer TAE.","to":"+6309755983121"}', '2022-12-18 14:25:22'),
+	(127, 20, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 14:25:22'),
+	(128, 21, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"LocalMJob \n Hello VILLANEA, Fux Devs has new open job Web Developer TAE.","to":"+6309755983121"}', '2022-12-18 14:25:22'),
+	(129, 21, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 14:25:23'),
+	(130, 22, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"LocalMJob \n Hello VILLANEA, Fux Devs has new open job Web Developer TAE.","to":"+6309755983121"}', '2022-12-18 14:25:23'),
+	(131, 22, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 14:25:23'),
+	(132, 23, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"LocalMJob \n Hello VILLANEA, Fux Devs has new open job Web Developer TAE.","to":"+6309755983121"}', '2022-12-18 14:25:23'),
+	(133, 23, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 14:25:23'),
+	(134, 8, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"LocalMJob \n Hello client, Fux Devs has new open job Web Developer TAE.","to":"+6309486502742"}', '2022-12-18 14:25:24'),
+	(135, 8, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 14:25:24'),
+	(136, 9, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"LocalMJob \n Hello client1, Fux Devs has new open job Web Developer TAE.","to":"+6309755983121"}', '2022-12-18 14:25:24'),
+	(137, 9, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 14:25:24'),
+	(138, 12, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"LocalMJob \n Hello marvin, Fux Devs has new open job Web Developer TAE.","to":"+6309486502742"}', '2022-12-18 14:25:24'),
+	(139, 12, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 14:25:25'),
+	(140, 15, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"LocalMJob \n Hello VILLANEA, Fux Devs has new open job Web Developer TAE.","to":"+6309755983121"}', '2022-12-18 14:25:25'),
+	(141, 15, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-18 14:25:25'),
+	(142, 18, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"LocalMJob \n Hello VILLANEA, Fux Devs has new open job Web Developer TAE.","to":"+6309755983121"}', '2022-12-18 14:25:25'),
+	(143, 18, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-18 14:25:25'),
+	(144, 20, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"LocalMJob \n Hello VILLANEA, Fux Devs has new open job Web Developer TAE.","to":"+6309755983121"}', '2022-12-18 14:25:25'),
+	(145, 20, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-18 14:25:26'),
+	(146, 21, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"LocalMJob \n Hello VILLANEA, Fux Devs has new open job Web Developer TAE.","to":"+6309755983121"}', '2022-12-18 14:25:26'),
+	(147, 21, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-18 14:25:26'),
+	(148, 22, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"LocalMJob \n Hello VILLANEA, Fux Devs has new open job Web Developer TAE.","to":"+6309755983121"}', '2022-12-18 14:25:26'),
+	(149, 22, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-18 14:25:26'),
+	(150, 23, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"LocalMJob \n Hello VILLANEA, Fux Devs has new open job Web Developer TAE.","to":"+6309755983121"}', '2022-12-18 14:25:26'),
+	(151, 23, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-18 14:25:26'),
+	(152, 8, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello client, Fux Devs has new open job Software Engineer Senior.","to":"+6309486502742"}', '2022-12-18 15:05:45'),
+	(153, 8, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 15:05:45'),
+	(154, 9, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello client1, Fux Devs has new open job Software Engineer Senior.","to":"+6309755983121"}', '2022-12-18 15:05:45'),
+	(155, 9, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 15:05:45'),
+	(156, 12, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello marvin, Fux Devs has new open job Software Engineer Senior.","to":"+6309486502742"}', '2022-12-18 15:05:45'),
+	(157, 12, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 15:05:46'),
+	(158, 15, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job Software Engineer Senior.","to":"+6309755983121"}', '2022-12-18 15:05:46'),
+	(159, 15, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 15:05:46'),
+	(160, 18, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job Software Engineer Senior.","to":"+6309755983121"}', '2022-12-18 15:05:46'),
+	(161, 18, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 15:05:46'),
+	(162, 20, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job Software Engineer Senior.","to":"+6309755983121"}', '2022-12-18 15:05:46'),
+	(163, 20, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 15:05:47'),
+	(164, 21, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job Software Engineer Senior.","to":"+6309755983121"}', '2022-12-18 15:05:47'),
+	(165, 21, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 15:05:47'),
+	(166, 22, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job Software Engineer Senior.","to":"+6309755983121"}', '2022-12-18 15:05:47'),
+	(167, 22, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 15:05:47'),
+	(168, 23, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job Software Engineer Senior.","to":"+6309755983121"}', '2022-12-18 15:05:47'),
+	(169, 23, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 15:05:47'),
+	(170, 23, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"You`re hired, Hello VILLANEA MARVIN, We see your resume and you have good potential for this kind of job Software Engineer Senior , Please contact us on 09093939708. - Fux Devs. And congratulation!....... please be ready for your interview","to":"+6309755983121"}', '2022-12-18 15:07:05'),
+	(171, 23, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-18 15:07:05'),
+	(172, 8, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello client, Fux Devs has new open job My baby.","to":"+6309486502742"}', '2022-12-28 03:36:22'),
+	(173, 8, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-28 03:36:23'),
+	(174, 9, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello client1, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:23'),
+	(175, 9, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-28 03:36:23'),
+	(176, 12, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello marvin, Fux Devs has new open job My baby.","to":"+6309486502742"}', '2022-12-28 03:36:23'),
+	(177, 12, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-28 03:36:23'),
+	(178, 15, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:23'),
+	(179, 15, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-28 03:36:24'),
+	(180, 18, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:24'),
+	(181, 18, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-28 03:36:24'),
+	(182, 20, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:24'),
+	(183, 20, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-28 03:36:24'),
+	(184, 21, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:24'),
+	(185, 21, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-28 03:36:25'),
+	(186, 22, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:25'),
+	(187, 22, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-28 03:36:25'),
+	(188, 23, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:25'),
+	(189, 23, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-28 03:36:25'),
+	(190, 8, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello client, Fux Devs has new open job My baby.","to":"+6309486502742"}', '2022-12-28 03:36:25'),
+	(191, 8, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-28 03:36:25'),
+	(192, 9, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello client1, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:25'),
+	(193, 9, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-28 03:36:26'),
+	(194, 12, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello marvin, Fux Devs has new open job My baby.","to":"+6309486502742"}', '2022-12-28 03:36:26'),
+	(195, 12, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-28 03:36:26'),
+	(196, 15, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:26'),
+	(197, 15, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-28 03:36:26'),
+	(198, 18, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:26'),
+	(199, 18, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-28 03:36:26'),
+	(200, 20, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:26'),
+	(201, 20, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-28 03:36:27'),
+	(202, 21, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:27'),
+	(203, 21, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-28 03:36:27'),
+	(204, 22, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:27'),
+	(205, 22, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-28 03:36:27'),
+	(206, 23, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:27'),
+	(207, 23, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-28 03:36:28'),
+	(208, 8, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello client, Fux Devs has new open job My baby.","to":"+6309486502742"}', '2022-12-28 03:36:28'),
+	(209, 8, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-28 03:36:28'),
+	(210, 9, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello client1, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:28'),
+	(211, 9, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `401 Unauthorized` response:\n{"error":{"code":403,"name":"ERR_AUTHENTICATION_FAILED","description":"Authentication field."}}\n', '2022-12-28 03:36:28'),
+	(212, 12, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello marvin, Fux Devs has new open job My baby.","to":"+6309486502742"}', '2022-12-28 03:36:28'),
+	(213, 12, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 03:36:28'),
+	(214, 15, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:28'),
+	(215, 15, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 03:36:29'),
+	(216, 18, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:29'),
+	(217, 18, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 03:36:29'),
+	(218, 20, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:29'),
+	(219, 20, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 03:36:29'),
+	(220, 21, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:29'),
+	(221, 21, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 03:36:30'),
+	(222, 22, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:30'),
+	(223, 22, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 03:36:30'),
+	(224, 23, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:30'),
+	(225, 23, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 03:36:30'),
+	(226, 8, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello client, Fux Devs has new open job My baby.","to":"+6309486502742"}', '2022-12-28 03:36:30'),
+	(227, 8, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 03:36:30'),
+	(228, 9, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello client1, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:31'),
+	(229, 9, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 03:36:31'),
+	(230, 12, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello marvin, Fux Devs has new open job My baby.","to":"+6309486502742"}', '2022-12-28 03:36:31'),
+	(231, 12, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 03:36:31'),
+	(232, 15, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:31'),
+	(233, 15, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 03:36:31'),
+	(234, 18, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:31'),
+	(235, 18, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 03:36:32'),
+	(236, 20, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:32'),
+	(237, 20, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 03:36:32'),
+	(238, 21, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:32'),
+	(239, 21, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 03:36:32'),
+	(240, 22, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:32'),
+	(241, 22, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 03:36:32'),
+	(242, 23, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:32'),
+	(243, 23, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 03:36:33'),
+	(244, 8, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello client, Fux Devs has new open job My baby.","to":"+6309486502742"}', '2022-12-28 03:36:33'),
+	(245, 8, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 03:36:33'),
+	(246, 9, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello client1, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:33'),
+	(247, 9, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 03:36:33'),
+	(248, 12, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello marvin, Fux Devs has new open job My baby.","to":"+6309486502742"}', '2022-12-28 03:36:33'),
+	(249, 12, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 03:36:34'),
+	(250, 15, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:34'),
+	(251, 15, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 03:36:34'),
+	(252, 18, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:34'),
+	(253, 18, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 03:36:34'),
+	(254, 20, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:34'),
+	(255, 20, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 03:36:34'),
+	(256, 21, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:34'),
+	(257, 21, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 03:36:35'),
+	(258, 22, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:35'),
+	(259, 22, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 03:36:35'),
+	(260, 23, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job My baby.","to":"+6309755983121"}', '2022-12-28 03:36:35'),
+	(261, 23, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 03:36:35'),
+	(262, 8, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello client, Fux Devs has new open job Security Guard.","to":"+6309486502742"}', '2022-12-28 04:46:46'),
+	(263, 8, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 04:46:47'),
+	(264, 9, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello client1, Fux Devs has new open job Security Guard.","to":"+6309755983121"}', '2022-12-28 04:46:47'),
+	(265, 9, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 04:46:47'),
+	(266, 12, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello marvin, Fux Devs has new open job Security Guard.","to":"+6309486502742"}', '2022-12-28 04:46:47'),
+	(267, 12, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 04:46:47'),
+	(268, 15, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job Security Guard.","to":"+6309755983121"}', '2022-12-28 04:46:47'),
+	(269, 15, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 04:46:47'),
+	(270, 18, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job Security Guard.","to":"+6309755983121"}', '2022-12-28 04:46:47'),
+	(271, 18, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 04:46:48'),
+	(272, 20, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job Security Guard.","to":"+6309755983121"}', '2022-12-28 04:46:48'),
+	(273, 20, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 04:46:48'),
+	(274, 21, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job Security Guard.","to":"+6309755983121"}', '2022-12-28 04:46:48'),
+	(275, 21, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 04:46:48'),
+	(276, 22, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job Security Guard.","to":"+6309755983121"}', '2022-12-28 04:46:48'),
+	(277, 22, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 04:46:48'),
+	(278, 23, '{"api_key":"2H7GtWOeyWYMff0XzK7en5zEdy6","api_secret":"m0hv1Nw4C0949gsL9RGVRIp75QomqWsLqD5fjpjB","from":"iConnect","text":"Grab A Worker \n Hello VILLANEA, Fux Devs has new open job Security Guard.","to":"+6309755983121"}', '2022-12-28 04:46:48'),
+	(279, 23, 'Client error: `POST https://api.movider.co/v1/sms` resulted in a `403 Forbidden` response:\n{"error":{"code":446,"name":"ERR_OFTEN_WRONG_APIKEY","description":"This api_key often wrong request. Please wait for a  (truncated...)\n', '2022-12-28 04:46:49');
 
-
-CREATE TABLE `tbl_verificationcode` (
+-- Dumping structure for table grab_worker.tbl_verificationcode
+CREATE TABLE IF NOT EXISTS `tbl_verificationcode` (
   `id` int NOT NULL AUTO_INCREMENT,
   `session` varchar(65) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `code` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
@@ -324,8 +602,8 @@ CREATE TABLE `tbl_verificationcode` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-
-INSERT INTO `tbl_verificationcode` (`id`, `session`, `code`, `status`, `used_at`, `created_at`) VALUES
+-- Dumping data for table grab_worker.tbl_verificationcode: ~5 rows (approximately)
+INSERT IGNORE INTO `tbl_verificationcode` (`id`, `session`, `code`, `status`, `used_at`, `created_at`) VALUES
 	(17, 'dd3d05d7de99af7a376db3aaf6a18dba', '484709', 1, '2022-09-01 21:34:41', '2022-09-01 21:33:54'),
 	(19, '5nRJwCgt95yfmq9qXlB1lv16683973682073', NULL, 0, '2022-11-14 03:42:48', '2022-11-14 03:42:48'),
 	(20, '5nRJwCgt95yfmq9qXly1SB16684344287422', NULL, 0, '2022-11-14 14:00:30', '2022-11-14 14:00:30'),

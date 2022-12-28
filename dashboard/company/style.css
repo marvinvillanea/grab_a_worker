@@ -332,6 +332,30 @@ button{
     font-size: 2rem;
     margin-right: 1rem;
 }
+
+#showcase_sub_list .container .container_title{
+    color: #623ADA;
+    padding: 1rem;
+    border-bottom: 1px rgb(204, 204, 204) solid;
+    display: flex;
+    justify-content: space-between;
+}
+#showcase_sub_list .container .container_title .filter{
+    display:flex;
+    gap: .5rem;
+}
+#showcase_sub_list .container .container_title .filter a{
+    text-decoration: none;
+    color: black;
+}
+#showcase_sub_list .container .container_title .filter a:hover{
+    color: #623ADA;
+}
+#showcase_sub_list .container .container_title .filter a.active{
+    color: #623ADA;
+}
+
+
 /* showcase_sub_applicants */
 #showcase_sub_applicants{
     display: flex;

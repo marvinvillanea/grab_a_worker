@@ -25,7 +25,8 @@ if(form("search")){
         tbl_jobs.j_max,
         tbl_jobs.j_currency_symbol,
         tbl_jobs.j_description,
-        tbl_jobs.j_created_at
+        tbl_jobs.j_created_at,
+        tbl_jobs.time_type
     FROM
         tbl_jobs
     INNER JOIN tbl_company ON tbl_company.userid = tbl_jobs.userid
@@ -35,6 +36,7 @@ if(form("search")){
     tbl_company.c_name LIKE '%$search%' OR
     tbl_jobs.j_name LIKE '%$search%' OR
     tbl_company.c_address LIKE '%$search%'
+    order by j_created_at desc
     ");
 }else{
     $onsearch = false;
@@ -54,13 +56,14 @@ if(form("search")){
             tbl_jobs.j_max,
             tbl_jobs.j_currency_symbol,
             tbl_jobs.j_description,
-            tbl_jobs.j_created_at
+            tbl_jobs.j_created_at,
+            tbl_jobs.time_type
         FROM
             tbl_jobs
         INNER JOIN tbl_company ON tbl_company.userid = tbl_jobs.userid
         INNER JOIN tbl_accounts ON tbl_accounts.id = tbl_jobs.userid
         where tbl_jobs.status_type = 0  
-        
+        order by j_created_at desc
         ");
         // WHERE   tbl_jobs.j_age >=  $u_age
     }else{
@@ -78,12 +81,14 @@ if(form("search")){
             tbl_jobs.j_max,
             tbl_jobs.j_currency_symbol,
             tbl_jobs.j_description,
-            tbl_jobs.j_created_at
+            tbl_jobs.j_created_at,
+            tbl_jobs.time_type
         FROM
             tbl_jobs
         INNER JOIN tbl_company ON tbl_company.userid = tbl_jobs.userid
         INNER JOIN tbl_accounts ON tbl_accounts.id = tbl_jobs.userid
         where tbl_jobs.status_type = 0 
+        order by j_created_at desc
         ");
     }
 }
@@ -140,7 +145,7 @@ if(form("search")){
                                         <div class="box_header_sub">
                                             <p>
                                                 <i class="fa fa-building"></i>
-                                                <?= $row["c_name"]?>
+                                                <?= $row["c_name"]?> 
                                             </p>
                                             <p>
                                                 <i class="fa fa-money"></i> &#8369; 
@@ -149,6 +154,10 @@ if(form("search")){
                                             <p>
                                                 <i class="fa fa-calendar"></i>
                                                 <?= date("m-d-Y",strtotime($row["j_created_at"]))?>
+                                            </p>
+                                            <p>
+                                                <i class="fa fa-clock-o"></i>
+                                                <?= $row["time_type"] ?>
                                             </p>
                                         </div>
                                     </div>

@@ -97,7 +97,23 @@ if($islogin){
     if($u_type == 2){
         $page = (form("page")) ? value("page") : "dashboard";
 
-        $load_jobs = mysqli_query($con,"SELECT * FROM `tbl_jobs` WHERE userid = $u_id");
+        
+        $query_load_job = "SELECT * FROM `tbl_jobs` WHERE userid = $u_id";
+        if(form("filter_job")){
+            $filter_job_where = array(
+                "all" => "",
+                "active" => " and `status_type` = 0 ",
+                "not_actived" => " and `status_type` = 1 ",
+                "Full-Time" => " and `time_type` = 'Full-Time' ",
+                "Part-Time" => " and `time_type` = 'Part-Time' ",
+                "Freelancer" => " and `time_type` = 'Freelancer' ",
+            );
+            if(value("filter_job")) {
+                $query_load_job = "SELECT * FROM `tbl_jobs` WHERE userid = $u_id ". $filter_job_where[value("filter_job")];
+            }
+        }
+
+        $load_jobs = mysqli_query($con,$query_load_job);
         $count_jobs = mysqli_num_rows($load_jobs);
 
         if(form("manage")){
@@ -306,11 +322,26 @@ if($islogin){
                             <div class="t1">
                                 <h3>Jobs</h3>
                                 <p>A list of all the jobs you've advertised.</p>
+
                             </div>
                             <div class="container">
+                               
+
                                 <div class="container_title">
-                                    Jobs
+                                    <div class="title">
+                                        Jobs
+                                    </div>
+                                    <div class="filter">
+                                        <a href="./?page=hire&sub=list&filter_job=all" class="<?= ($filter_job=="all") ? "active" : "" ?>" >ALL</a>
+                                        <a href="./?page=hire&sub=list&filter_job=active" class="<?= ($filter_job=="active") ? "active" : "" ?>">Active</a>
+                                        <a href="./?page=hire&sub=list&filter_job=not_actived" class="<?= ($filter_job=="not_actived") ? "active" : "" ?>">Not Active</a>
+                                        <a href="./?page=hire&sub=list&filter_job=Full-Time" class="<?= ($filter_job=="Full-Time") ? "active" : "" ?>">Full-Time</a>
+                                        <a href="./?page=hire&sub=list&filter_job=Part-Time" class="<?= ($filter_job=="Part-Time") ? "active" : "" ?>">Part-Time</a>
+                                         <a href="./?page=hire&sub=list&filter_job=Freelancer" class="<?= ($filter_job=="Freelancer") ? "active" : "" ?>">Freelancer</a>
+                                    </div>
+                                   
                                 </div>
+
                                 <div class="container_body">
                                     <?php if(hasResult($load_jobs)){?>
                                         <?php while($row = mysqli_fetch_assoc($load_jobs)){?>
@@ -371,6 +402,14 @@ if($islogin){
                                             <select name="status_atvie" id="status_atvie">
                                                <option value="0" <?= ($update && $data["status_type"] == 0) ? "selected" : ""  ?>   >Active</option>
                                                <option value="1" <?= ($update && $data["status_type"] == 1) ? "selected" : ""  ?>   >Not Active</option>
+                                            </select>
+                                        </div>
+                                        <div class="field">
+                                            <select name="time_type" id="time_type">
+                                                <option disabled>-- SELECT TIME TYPE --</option>
+                                               <option value="Part-Time" <?= ($update && $data["time_type"] == "Part-Time") ? "selected" : ""  ?>   >Part-Time</option>
+                                               <option value="Full-Time" <?= ($update && $data["time_type"] == "Full-Time") ? "selected" : ""  ?>   >Full-Time</option>
+                                               <option value="Freelancer" <?= ($update && $data["time_type"] == "Freelancer") ? "selected" : ""  ?>   >Freelancer</option>
                                             </select>
                                         </div>
                                         <div class="field">
