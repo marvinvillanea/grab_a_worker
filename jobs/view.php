@@ -6,6 +6,7 @@ require_once '../session.php';
 
 $report = false;
 $apply = false;
+$already_submited = false;
 
 if(form("id")){
     if(!$islogin){
@@ -44,6 +45,14 @@ if(form("id")){
         $data = mysqli_fetch_assoc($result_query);
     }else{
         navigate("./");
+    }
+
+    $job_id = $data["id"];
+    $company_id = $data["c_id"];
+
+    $check_application = mysqli_query($con,"SELECT * FROM `tbl_applicants` WHERE `companyid` = $company_id AND `applicantsid` = $u_id AND `jobid` = $job_id ");
+    if(hasResult($check_application)){
+        $already_submited = true;
     }
 
     if(form("apply")){
@@ -191,14 +200,29 @@ if(form("id")){
                     </div>
                     <hr>
                     <div class="box_button">
-                        <a href="?id=<?= $data["id"] ?>&apply=<?= $data["id"] ?>" class="btn_applynow">
-                            <i class="fa fa-file-text-o"></i>
-                            APPLY NOW
-                        </a>
-                        <a href="?report=<?= $data["c_id"] ?>" class="btn_applynow">
-                            <i class="fa fa-exclamation-triangle"></i>
-                            REPORT
-                        </a>
+                        
+
+                        <?php 
+                        if($already_submited) {
+                             ?>
+                            <button class="button btn_applynow"  name='declined' >
+                                ALREADY APPLYED
+                            </button>
+                            <?php
+                        } else {
+                            ?>
+                            <a href="?id=<?= $data["id"] ?>&apply=<?= $data["id"] ?>" class="btn_applynow">
+                                <i class="fa fa-file-text-o"></i>
+                                APPLY NOW
+                            </a>
+                            <a href="?report=<?= $data["c_id"] ?>" class="btn_applynow">
+                                <i class="fa fa-exclamation-triangle"></i>
+                                REPORT
+                            </a>
+                            <?php
+                        }
+                        ?>
+                       
                     </div>
             </div>
             <?php }?>
